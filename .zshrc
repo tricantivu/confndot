@@ -58,10 +58,7 @@ source ~/.aliases
 
 # Configure SSH
 s() {
-    whence -p pkill ssh-{agent,add} &> /dev/null || {
-
-        return 1
-    }
+    whence -p pkill ssh-{agent,add} &> /dev/null || return 1
 
     # Terminate existing ssh-agent processes.
     pkill ssh-agent &> /dev/null
@@ -82,20 +79,11 @@ eg() {
 
     local filesToSearch=("${@:2}")
 
-    echo "${filesToSearch[@]}"
+    (( ${#filesToSearch} > 1 )) && grep --color=always -EH -- \
+                                   "$1" "${filesToSearch[@]}"
 
-    (( ${#filesToSearch} > 1 )) && {
-
-        # Return match(es) with their corresponding filename(s).
-        grep --color=always -EH -- "$1" "${filesToSearch[@]}"
-    }
-
-    (( ${#filesToSearch} == 1 )) && {
-
-        # Return match(es) without filename(s).
-        grep --color=always -E -- "$1" "${filesToSearch[@]}"
-    }
-
+    (( ${#filesToSearch} == 1 )) && grep --color=always -E -- \
+                                    "$1" "${filesToSearch[@]}"
 }
 
 # Delete trailing tab and space characters from text
