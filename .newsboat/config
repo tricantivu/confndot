@@ -1,0 +1,51 @@
+# Colorscheme
+include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
+
+# Date and time format for articles.
+datetime-format " %d/%m/%y"
+
+# Options
+confirm-mark-all-feeds-read yes
+confirm-mark-feed-read      no
+confirm-exit                yes
+
+# Notifications.
+notify-program "notify-send"
+notify-format "Reloading finished, you have %d new articles."
+
+# Feed order
+feed-sort-order unreadarticlecount-asc
+
+# Error log file path.
+error-log ~/.newsboat/errors.log
+
+# Wait an amount of seconds before downloading articles again.
+download-timeout 60
+
+# Browser to open articles.
+browser "falkon %u"
+
+# Reload feeds after an amount of minutes.
+reload-time 180
+
+# Highlight articles in feeds matching a certain pattern.
+highlight-article "title =~ \"CVE-[0-9]{1,4}-[0-9]+\" or content =~\"CVE-[0-9]{1,4}-[0-9]+\"" color226 default protect
+
+# Disable saving text searches in a file.
+history-limit 0
+
+# Unset default keybindings.
+unbind-key ^O
+unbind-key ^G
+unbind-key J
+unbind-key K
+unbind-key j
+unbind-key k
+
+# Set new keybindings
+bind-key K pageup
+bind-key J pagedown
+bind-key j next
+bind-key k prev
+bind-key ^O open-all-unread-in-browser
+bind-key ^G goto-title

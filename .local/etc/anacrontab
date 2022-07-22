@@ -1,0 +1,16 @@
+# Environment
+
+SHELL=/bin/sh
+
+# Who receives and sends mail.
+MAILTO=alex@localhost
+MAILFROM=$USER-anacron@anacron.com
+
+START_HOURS_RANGE=10-18
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+# Job descriptions
+7           0       noroot.cron.weekly      run-parts /home/alex/.local/etc/cron.weekly
+@monthly    0       noroot.cron.monthly     run-parts /home/alex/.local/etc/cron.monthly
+5           0       noroot.cron.fived       bleachbit -c system.tmp vim.history > /tmp/system-cleanup.log
+15          0       noroot.cron.fifteend    find "/home/alex/.local/share/data/Mega Limited/MEGAsync/logs" -mtime +15 -type f -name "*.log" -exec truncate --size=0 {} \; 2>&- > /tmp/mega-truncated.log

@@ -1,0 +1,28 @@
+# Disable bell on tab completions.
+set bell-style none
+
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Color files by their type.
+set colored-stats on
+
+# Show file type when completing.
+set visible-stats on
+
+# Show Vi or Emacs mode when editing or typing text.
+set show-mode-in-prompt on
+
+# Show matching parenthesis.
+set blink-matching-paren on
+
+# Add a slash at the end of a symlink that point to a directory.
+set mark-symlinked-directories on
+
+# Change default insert and command mode string.
+set vi-ins-mode-string (INSERT)
+set vi-cmd-mode-string (COMMAND)
+
+"\C-l":clear-screen

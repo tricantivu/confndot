@@ -1,0 +1,17 @@
+# Exclude pseudo filesystems.
+--exclude-kernfs
+
+# Exclude files/directories matching the following patterns.
+--exclude .git
+
+# Show permissions, ownership and last modification time of files.
+--extended
+
+# Prompt for a confirmation when exiting ncdu.
+--confirm-quit
+
+# Sort directories before files.
+--group-directories-first
+
+# Colorscheme
+--color dark

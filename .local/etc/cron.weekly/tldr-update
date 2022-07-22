@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Constant(s)
+REQUEST_COUNT=5
+
+# Function(s)
+printError() {
+    printf "ERROR: $1\n" >&2
+}
+
+# Check dependencies are met
+for scriptDependency in ping tldr; do
+    which "${scriptDependency}" 1> /dev/null 2>&1 || {
+
+        printError "Missing dependency ${scriptDependency}."
+
+        exit 1
+    }
+done
+
+# Check network connectivity
+ping -c ${REQUEST_COUNT} github.com 1> /dev/null 2>&1 || {
+
+    printError "Updates can not be fetched, network connectivity failed."
+
+    exit 1
+}
+
+# Update tldr pages
+tldr --update -q || {
+
+    printError "tldr pages could not be updated."
+
+    exit 1
+}
+
+printf 'tldr pages updated successfully!\n'

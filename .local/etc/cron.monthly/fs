@@ -1,0 +1,72 @@
+#!/bin/sh
+
+# Function(s)
+printError() {
+
+    printf "ERROR: $1\n" >&2
+}
+
+# Constant(s)
+BAD_CONF_ERR="Can not search binaries, PATH environment variable is misconfigured."
+
+# Global variable(s)
+temporaryFile="$(mktemp --suffix='.tmp' "/tmp/${0##*/}".XXXXXX)"
+
+# Delete temporary file on script exit.
+trap 'rm "${temporaryFile}" 1> /dev/null 2>&1' EXIT
+
+# Verify environment
+"${PATH:-true}" 2>&- && {
+
+    printError "Can not search for binaries, PATH environment variable is unset or empty."
+
+    exit 1
+}
+
+# Validate $PATH's entries.
+IFS=':'
+
+for entry in ${PATH}; do
+    [ -d "${entry}" ] || {
+
+        printError "${BAD_CONF_ERR}"
+
+        exit 1
+    }
+
+    [ -r "${entry}" ] || {
+        printError "${BAD_CONF_ERR}"
+
+        exit 1
+    }
+done
+
+# Parse $PATH.
+searchableDirectories="$(echo "${PATH}" | sed 's/:/ /g')"
+
+
+# Write list of SUID binaries to a file.
+IFS=' '
+
+find ${searchableDirectories} -type f -executable -perm -u+s > "${temporaryFile}"
+
+# Count binaries from file.
+suidBinaries=0
+
+while read -r fileLine; do
+    [ -z "${fileLine}" ] && {
+
+        continue
+    }
+
+    suidBinaries=$(( suidBinaries += 1 ))
+done < "${temporaryFile}"
+
+[ ${suidBinaries} -eq 0 ] && {
+
+    printError "No binaries with SUID bit set were found."
+
+    exit 1
+}
+
+printf '%d binaries with SUID bit set were found.\n' "${suidBinaries}"

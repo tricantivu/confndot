@@ -1,0 +1,151 @@
+# VPN connection and configuration management.
+alias status='protonvpn-cli s'
+alias connect='protonvpn-cli c'
+alias disconnect='protonvpn-cli d'
+alias vpnconf='protonvpn-cli config -l'
+alias chdns='protonvpn-cli config --dns custom --ip'
+
+# Accesing the system clipboard.
+alias c='xclip -in -selection clipboard'
+alias cl='xclip -o -selection clipboard'
+
+# Passphrase generation
+alias pgen='keepassxc-cli diceware -W'
+
+# File comparison and pattern search.
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
+alias bchar="grep --color -n -P '(\t|\ )+$'"
+alias diff="diff --color=always"
+
+# File listing
+alias ls='ls --color'
+alias ll='ls -SAlh --color'
+alias lt='ls -Alth --color'
+alias lr='ls -RAlh --color'
+
+# Get public IP address
+alias gip='curl ifconfig.me'
+
+# Archiving and compression.
+alias xd='xz -dv'
+alias tu='tar -xvf'
+alias tl='tar -tvf'
+alias ta='tar -cjf'
+alias bd='bzip2 -d'
+alias zd='unzip -v'
+alias zc='zip -vm'
+
+# Music.
+alias rp='mpv --play-dir=forward --loop-playlist=inf ~/Música'
+
+# File metadata.
+alias mat2='mat2 --inplace'
+
+# Spell checking.
+alias cs='aspell -x -l en -c'
+
+# Package management.
+alias p='pacman --color always'
+alias lfpk='sudo pacman -Ql'
+alias rfpk='sudo pacman -Fl'
+alias ppk='sudo pacman -Qip'
+alias upk='sudo pacman -Syu'
+alias rpk='sudo pacman -R'
+alias pa='pamac search --aur'
+alias pi='pamac install'
+
+# Viewing logs from systemd.
+alias ju='journalctl --reverse -u'
+alias jU='journalctl --reverse --user-unit'
+alias ji='journalctl --identifier'
+alias jd='journalctl --disk-usage'
+alias jvs='sudo journalctl --vacuum-size'
+alias jvf='sudo journalctl --vacuum-files'
+alias jp='journalctl -b 0 --priority'
+alias jf='journalctl -b 0 --facility'
+
+# Interacting with systemd.
+alias ssu='systemctl cat'
+alias sst='sudo systemctl start'
+alias se='sudo systemctl enable'
+alias sd='sudo systemctl disable'
+alias sr='sudo systemctl restart'
+alias slt='systemctl list-timers'
+alias sf='systemctl --failed list-units'
+alias sdr='sudo systemctl daemon-reload'
+
+# On a user "level".
+alias sk='systemctl --user'
+
+# Verbosity and confirmation prompts.
+alias rm='rm -vi'
+alias cp='cp -vi'
+alias mv='mv -vi'
+alias ln='ln -vi'
+
+# Manuals.
+alias sm='man -k'
+alias info='info --vi-keys'
+
+# Locating files.
+alias l='locate'
+alias udb='sudo updatedb'
+
+# Modifying users.
+alias lu='sudo usermod -L'
+alias gu='sudo usermod -aG'
+
+# tmux shortcuts
+alias sts='tmux ls'
+alias ats='tmux a -t'
+alias nts='tmux new -s'
+
+# Setting up and using SSH.
+alias kssh='kitty +kitten ssh'
+
+# Use human readable format for these commands.
+alias du='du -h'
+alias df='df -h'
+
+# Git shortcuts.
+alias g='git'
+alias gk='git checkout'
+alias gd='git diff --staged'
+alias gl='git log --oneline'
+alias gc='git commit --message'
+
+# Denying or allow messages to terminal.
+alias em='mesg y'
+alias dm='mesg d'
+
+# Image and document viewing
+alias img='nsxiv -aptf'
+alias z='zathura --fork'
+
+# Viewing kernel ring buffer messages.
+alias kc='sudo dmesg --color=always -f'
+alias kl='sudo dmesg --color=always -l'
+alias kw='sudo dmesg --color=always -TWx'
+alias kh='sudo dmesg --color=always -Tkx'
+alias ka='sudo dmesg --color=always -Tukx'
+
+# Network management.
+alias dw='nmcli radio wifi off'
+alias ew='nmcli radio wifi on'
+
+# Listing open files.
+alias ft='lsof -i TCP:'
+alias fu='lsof -i UDP:'
+
+# Reference: https://sleeplessbeastie.eu/2019/01/21/how-to-verify-fstab-file/
+alias chktab='sudo findmnt --verbose -x'
+
+alias v='nvim'
+alias pdir='cd -'
+alias wg='wall -g'
+alias a='at now +'
+alias vrc='sudo rsyslogd -N 1'
+alias sgi='onefetch -E --show-logo always'
+alias t="\time --format '\nReal: %E   User-mode: %U   Kernel-mode: %S   Exit code: %x' --"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Reference: https://wiki.gentoo.org/wiki/Polybar#Create_a_Polybar_launch_script
+
+# Terminate existing polybar processes (if any exist).
+killall --quiet polybar
+
+# Start polybar (use bar named "mango").
+polybar mango |& tee --append /tmp/polybar.log & disown

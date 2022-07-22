@@ -1,0 +1,60 @@
+[global_config]
+  focus = mouse
+  handle_size = 1
+  borderless = True
+  title_inactive_bg_color = "#3d3846"
+  inactive_color_offset = 0.7570093457943925
+  enabled_plugins = ,
+  title_use_system_font = False
+  title_font = IBM Plex Sans Medium 12
+  putty_paste_style_source_clipboard = True
+  smart_copy = False
+[keybindings]
+  zoom_in = <Primary>KP_Add
+  go_prev = <Primary><Shift>p
+  go_up = <Primary><Shift>Up
+  go_down = <Primary><Shift>Down
+  go_left = <Primary><Shift>Left
+  go_right = <Primary><Shift>Right
+  rotate_cw = <Primary>exclamdown
+  rotate_ccw = <Primary>question
+  split_horiz = <Primary>h
+  split_vert = <Primary>b
+  close_term = <Primary>dead_diaeresis
+  copy = F10
+  paste = <Primary><Shift>v
+  page_up = Page_Up
+  page_down = Page_Down
+  resize_up = <Primary><Shift>k
+  resize_down = <Primary><Shift>j
+  resize_left = <Primary><Shift>h
+  resize_right = <Primary><Shift>l
+  prev_tab = <Shift>Tab
+  layout_launcher = <Shift><Alt>d
+  preferences = <Primary>comma
+  help = <Shift><Alt>h
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_color = "#070303"
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#deddda"
+    font = JetBrainsMono Nerd Font Mono Medium 11
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#000000:#fb1313:#3eee12:#f4fd0e:#2f6fcd:#cb1ef6:#88ffff:#faebd7:#969696:#ff1818:#00ff00:#f7fc07:#1b71f1:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]

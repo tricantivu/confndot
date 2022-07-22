@@ -1,0 +1,42 @@
+# Prompt configuration
+format = """
+[┌─────────────────── ](bold fg:#FFFF99)
+[│](bold fg:#FFFF99)$directory $git_branch
+[└─](bold fg:#FFFF99)$username@$hostname $shell$character """
+
+# Separate each shell prompt with a newline character.
+add_newline = true
+
+[character]
+disabled = false
+success_symbol= "[ ](bold fg:#4CBB17)"
+error_symbol= "[ ](bold fg:#DC143C)"
+
+# Show information about the shell currently running.
+[shell]
+disabled = false
+format = "[[ ]()$indicator]($style)"
+style = "bold italic white"
+bash_indicator = "Bash"
+
+[directory]
+format = "[$path](white)"
+home_symbol = " "
+truncation_symbol = ".../"
+truncate_to_repo = false
+
+[username]
+format = "[$user]($style)"
+show_always = true
+style_user = "bold italic fg:#00FFD7"
+style_root = "bold red"
+
+[hostname]
+format = "[$hostname]($style)"
+style = "bold italic #87FF00"
+ssh_only = false
+trim_at = ""
+
+[git_branch]
+format = "on [$branch $symbol]($style)"
+symbol = ""
