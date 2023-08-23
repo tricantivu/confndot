@@ -1,0 +1,36 @@
+[style.description]
+underline = false
+bold = false
+italic = false
+
+[style.command_name]
+foreground = "white"
+underline = true
+italic = false
+bold = true
+
+[style.example_text]
+foreground = "green"
+underline = false
+italic = false
+bold = false
+
+[style.example_code]
+foreground = { ansi = 33 }
+underline = false
+italic = true
+bold = true
+
+[style.example_variable]
+foreground = "cyan"
+underline = false
+italic = true
+bold = true
+
+[display]
+compact = false
+use_pager = false
+
+[updates]
+auto_update = true
+auto_update_interval_hours = 72

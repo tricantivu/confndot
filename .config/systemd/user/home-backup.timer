@@ -1,0 +1,10 @@
+[Unit]
+Description = Backup home directory
+
+[Timer]
+OnCalendar = monthly
+AccuracySec = 45 msec
+Persistent = 1
+
+[Install]
+WantedBy = timers.target

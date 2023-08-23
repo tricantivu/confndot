@@ -1,0 +1,10 @@
+[Unit]
+Description = Change desktop wallpaper
+
+[Timer]
+Unit = wallee.service
+OnCalendar = 7/3:00:00
+AccuracySec = 15 seconds
+
+[Install]
+WantedBy = timers.target

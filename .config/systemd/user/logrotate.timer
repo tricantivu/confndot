@@ -1,0 +1,9 @@
+[Unit]
+Description = User log rotation
+
+[Timer]
+OnStartupSec = 1 hour 15 minutes
+Unit = logrotate.service
+
+[Install]
+WantedBy = timers.target

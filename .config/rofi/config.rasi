@@ -1,0 +1,23 @@
+configuration {
+
+    modi: "drun,window,windowcd";
+    font: "Montserrat 12";
+    location: 6;
+    show-icons: true;
+    icon-theme: "Moka";
+    window-thumbnail: true;
+
+  window {
+
+    -matching: "regex";
+    -window-format: "{w} {t}";
+  }
+
+  timeout {
+
+    action: "kb-cancel";
+    delay: 0;
+  }
+}
+
+@theme "/home/alex/.local/share/rofi/themes/spotlight-dark.rasi"

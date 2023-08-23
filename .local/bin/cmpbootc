@@ -1,0 +1,145 @@
+#!/usr/bin/env bash
+
+usage() {
+
+cat << USAGE
+Usage : ${0##*/} [OPTION]
+Compare system boot count.
+
+Options:
+
+    -h          show this help information and quit.
+    -l LIMIT    fail if boot count is below LIMIT
+    -g LIMIT    fail if boot count exceeds LIMIT
+
+If none are specified, the boot count will be written to STDOUT.
+
+Exit codes:
+
+${0##*/} returns 0 if the comparisons between the boot count and limit succeed.
+1 if a dependency is missing or an invalid option/argument was given.
+
+2 is returned if no options were given or they were used improperly.
+
+Examples:
+
+    1. Check system has booted less than three times
+
+        ${0##*/} -l 3
+
+
+    2. Check system has booted more than two times
+
+        ${0##*/} -g 2
+
+
+    3. Get current boot count
+
+        ${0##*/}
+USAGE
+}
+
+err() {
+
+    printf '%s\n' "$*" >&2
+}
+
+declare -r ISO_TODAY_DATE="$(printf '%(%F)T')"
+declare -ar DEPENDENCIES=('last')
+
+for cmd in "${DEPENDENCIES[@]}"; do
+
+    type -P "${cmd}" &> /dev/null || {
+
+        err "Missing ${cmd@Q} command, please install it"
+
+        exit 1
+    }
+
+done
+
+optc=0
+
+while getopts ':hg:l:' opt; do
+
+    (( optc++ ))
+
+    case "${opt}" in
+        (h)
+
+            usage
+
+            exit 0
+        ;;
+        (g)
+
+            limit="${OPTARG}"
+
+            gt_opt=true
+        ;;
+        (l)
+
+            limit="${OPTARG}"
+
+            lt_opt=true
+        ;;
+        ('?')
+
+            err "Invalid option \"-${OPTARG}\""
+
+            exit 2
+        ;;
+    esac
+
+done
+
+bootc=0
+
+while read -r line; do
+
+    [[ "${line}" =~ wtmp ]] || (( "${#line}" )) && continue
+
+    (( bootc++ ))
+
+done < <(last --since "${ISO_TODAY_DATE@P}" 'system boot' 2>&-)
+
+(( "${optc}" )) || {
+
+    echo "${bootc}"
+
+    exit 0
+}
+
+[[ "${limit}" =~ ^[1-9]+[0-9]*$ ]] || {
+
+    err "Invalid boot limit ${limit@Q}"
+
+    exit 1
+}
+
+${gt_opt} && {
+
+    (( bootc > limit )) && {
+
+        err "System has booted more than ${limit} times"
+
+        exit 0
+    }
+}
+
+${lt_opt} && {
+
+    (( bootc < limit )) && {
+
+        err "System has booted less than ${limit} times"
+
+        exit 0
+    }
+}
+
+(( bootc == 1 )) && {
+
+    echo 'System has only booted once'
+
+    exit 0
+}

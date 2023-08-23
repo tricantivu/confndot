@@ -1,0 +1,10 @@
+set show-hidden true
+
+set statusbar-home-tilde true
+
+set window-title-page true
+set window-title-home-tilde true
+
+set selection-clipboard clipboard
+
+set font "PxPlus IBM VGA8 Regular 16"

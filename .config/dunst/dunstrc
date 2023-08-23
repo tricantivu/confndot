@@ -1,0 +1,53 @@
+[global]
+width = (1, 300)
+height = 300
+offset = 10x50
+
+corner_radius = 7
+separator_height = 8
+
+padding = 8
+horizontal_padding = 8
+
+min_icon_size = 0
+max_icon_size = 32
+
+history_length = 15
+notification_limit = 3
+
+frame_color = "#000000"
+separator_color = auto
+
+markup = full
+transparency = 15
+font = BlexMono Nerd Font 10
+format = "(<i>%a</i>):\n\n<u>%s</u>\n\n<b>%b</b>"
+
+icon_path = /usr/share/icons/Moka/16x16/status:/usr/share/icons/Moka/16x16/devices:/usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+mouse_middle_click = do_action, close_current
+
+[urgency_low]
+background = "#4CBB17"
+foreground = "#FFFFFF"
+
+timeout = 10
+
+default_icon = /usr/share/icons/Moka/16x16/status/dialog-info.png
+
+[urgency_normal]
+background = "#FF7900"
+foreground = "#FFFFFF"
+
+timeout = 10
+
+default_icon = /usr/share/icons/Moka/16x16/status/dialog-warning.png
+
+[urgency_critical]
+background = "#DB5A6B"
+foreground = "#FFFFFF"
+frame_color = "#FF0000"
+
+timeout = 0
+
+default_icon = /usr/share/icons/Moka/16x16/status/dialog-error.png

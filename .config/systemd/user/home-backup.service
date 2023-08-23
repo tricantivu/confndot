@@ -1,0 +1,18 @@
+[Unit]
+Description = Backup home directory
+
+Requires = graphical-session.target name-resolv.target
+After = graphical-session.target name-resolv.target
+
+AssertFileNotEmpty = %h/exclude
+
+[Service]
+UMask = 0077
+
+Nice = 0
+CPUQuota = 80%
+MemoryHigh = 60%
+IOSchedulingPriority = 3
+IOSchedulingClass = best-effort
+
+ExecStart = duplicity full --encrypt-key 2A29133697A93CCEBCB69C4EF271A26A3948D34A --exclude-filelist %h/exclude %h file:///backups

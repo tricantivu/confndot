@@ -1,0 +1,7 @@
+[Unit]
+Description = Name resolution
+
+Requires = name-resolv.service
+
+RefuseManualStart = 1
+StopWhenUnneeded = 1

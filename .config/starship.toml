@@ -1,0 +1,44 @@
+format = "$username[@](bold italic #FFE314)$hostname $directory \\[($c )($python )$git_branch $git_status\\] $character "
+command_timeout = 3000
+
+[username]
+style_user = "bold italic #00FFD7"
+format = "[$user]($style)"
+style_root = "bold red"
+show_always = true
+
+[hostname]
+format = "[$hostname]($style)"
+style = "bold italic #87FF00"
+ssh_only = false
+trim_at = ""
+
+[directory]
+format = "[$path](white)[$read_only]($read_only_style)"
+read_only_style = "bold #DC343B"
+truncation_symbol = ".../"
+truncate_to_repo = false
+
+[c]
+format = "[($name)( $version)]($style)"
+version_format = "$raw"
+style = "bold italic white"
+
+[python]
+format = "[${symbol}(${version})]($style)"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style)"
+symbol = " "
+
+[git_status]
+format = "[$all_status$up_to_date$diverged | $ahead_behind]($style)"
+up_to_date = " "
+diverged = ""
+stashed = "󱠶 "
+ahead = " "
+behind = " "
+
+[character]
+success_symbol= "[](bold #4CBB17)"
+error_symbol= "[](bold #DC143C)"

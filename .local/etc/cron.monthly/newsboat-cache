@@ -1,0 +1,10 @@
+#!/bin/sh
+
+command -vp newsboat 1> /dev/null 2>&1 || {
+
+    printf 'error: missing %s command\n' 'newsboat' >&2
+
+    exit 1
+}
+
+exec newsboat -X

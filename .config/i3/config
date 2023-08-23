@@ -1,0 +1,196 @@
+set $mod Mod4
+
+########################
+# Autostarted programs #
+########################
+exec_always --no-startup-id "picom -b"
+
+exec --no-startup-id nm-applet
+
+exec_always wp ~/Pictures/Wallpapers
+
+exec_always --no-startup-id ~/.config/polybar/launch
+
+exec --no-startup-id xautolock -time 10 -locker "i3lock -ef -p default -c 708090"
+
+
+################################
+# Keybindings to open programs #
+################################
+bindsym $mod+Return exec i3-sensible-terminal
+
+bindsym $mod+b exec qutebrowser
+
+bindsym $mod+g exec screenshot -m grab
+bindsym $mod+n exec screenshot -m normal
+
+bindsym $mod+p exec keepassxc
+
+bindsym $mod+d exec "rofi -show drun"
+
+bindsym $mod+m exec minecraft-launcher
+
+bindsym $mod+Shift+b exec i3lock -c "#000000" -p win --show-failed-attempts
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
+
+set $refresh_i3status killall -SIGUSR1 i3status
+
+bindsym XF86MonBrightnessUp   exec --no-startup-id backlight_control +1
+bindsym XF86MonBrightnessDown exec --no-startup-id backlight_control -1
+
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +1%    && $refresh_i3status
+bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   -1%    && $refresh_i3status
+bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle && $refresh_i3status
+bindsym XF86AudioMicMute      exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+########
+# Gaps #
+########
+default_border pixel 3
+
+gaps inner 10
+gaps outer 5
+
+set $step 5
+
+bindsym $mod+x       gaps outer current plus $step
+bindsym $mod+Shift+x gaps outer current minus $step
+
+bindsym $mod+i       gaps inner current plus $step
+bindsym $mod+Shift+i gaps inner current minus $step
+
+# Uncomment if you're using i3-gaps-rounded
+# border_radius 15
+
+##########
+# Colors #
+##########
+
+# Grays
+set $jet_gray         #343434
+set $dark_gray        #A9A9A9
+set $spanish_gray     #989898
+set $charcoal_gray    #36454F
+
+# Blacks
+set $black            #000000
+
+# Blues
+set $savoy_blue       #4B61D1
+set $cyan_blue_shade  #40649B
+
+# Yellows
+set $pantone_yellow   #FEDF00
+
+# Greens
+set $charleston_green #232B2B
+
+# Whites
+set $white            #FFFFFF
+
+##############
+# Containers #
+##############
+font pango:Source Code Pro Bold 11
+
+client.focused    $cyan_blue_shade $black           $white     $black            $cyan_blue_shade
+client.unfocused  $spanish_gray    $charcoal_gray   $dark_gray $charleston_green $jet_gray
+
+floating_modifier $mod
+
+bindsym $mod+Shift+q kill
+
+# Focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+space focus mode_toggle
+
+# Split
+bindsym $mod+o split h
+bindsym $mod+v split v
+
+# Modes
+bindsym $mod+f floating toggle
+bindsym $mod+F8 fullscreen toggle
+
+mode "Resize" {
+        bindsym l     resize shrink width   5 px or 5 ppt
+        bindsym j     resize grow height    5 px or 5 ppt
+        bindsym k     resize shrink height  5 px or 5 ppt
+        bindsym h     resize grow width     5 px or 5 ppt
+
+        bindsym Right resize shrink width   5 px or 5 ppt
+        bindsym Up    resize grow height    5 px or 5 ppt
+        bindsym Down  resize shrink height  5 px or 5 ppt
+        bindsym Left  resize grow width     5 px or 5 ppt
+
+        bindsym Return mode              "default"
+        bindsym Escape mode              "default"
+        bindsym $mod+r mode              "default"
+}
+
+bindsym $mod+r mode "Resize"
+
+# Layout
+bindsym $mod+t layout toggle all
+bindsym $mod+s layout stacking
+bindsym $mod+e layout default
+
+bindsym $mod+Shift+Left  move container to output left
+bindsym $mod+Shift+Right move container to output right
+
+##############
+# Workspaces #
+##############
+set $workspace1 ""
+set $workspace2 ""
+set $workspace3 ""
+set $workspace4 ""
+set $workspace5 ""
+set $workspace6 ""
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+# Switching
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# Moving focused containers
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+bindsym $mod+Shift+r restart
+
+bindsym $mod+Left  workspace prev
+bindsym $mod+Right workspace next
+
+#############################
+# Extra configuration files #
+#############################
+include "$HOME/.config/i3/assign"

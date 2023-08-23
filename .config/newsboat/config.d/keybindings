@@ -1,0 +1,13 @@
+unbind-key J
+unbind-key K
+unbind-key j
+unbind-key k
+unbind-key ^O
+unbind-key ^G
+
+bind-key j next
+bind-key k prev
+bind-key K pageup
+bind-key J pagedown
+bind-key ^G goto-title
+bind-key ^O open-all-unread-in-browser

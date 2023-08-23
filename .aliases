@@ -1,0 +1,119 @@
+# vi: ft=sh ts=4 tw=90
+
+###########
+# systemd #
+###########
+alias sk='systemctl --user'
+alias skdr='systemctl --user daemon-reload'
+
+alias jr='journalctl -r'
+alias jd='journalctl --disk-usage'
+
+alias us='systemctl start'
+alias se='systemctl enable'
+alias sd='systemctl disable'
+alias sr='systemctl restart'
+alias sf='systemctl --failed list-units'
+
+######################
+# Package management #
+######################
+alias pi='pamac install'
+alias P='pacman -Syu'
+alias pa='pamac search --aur'
+
+#############
+# Archiving #
+#############
+alias tx='tar -xvf'
+alias tl='tar -tvf'
+alias ta='tar -cjf'
+
+######################################
+# File pattern search and comparison #
+######################################
+alias grep='grep --color'
+alias egrep='egrep --color'
+alias fgrep='fgrep --color'
+alias diff="diff --color=always"
+alias pcregrep='pcregrep --color'
+
+alias findip="grep -E '(2[0-5]{1,2}|1?[0-9]{1,2})\.(2[0-5]{1,2}|1?[0-9]{1,2})\.(2[0-5]{1,2}|1?[0-9]{1,2})\.(2[0-5]{1,2}|1?[0-9]{1,2})'"
+
+#####################
+# File manipulation #
+#####################
+alias rm='rm -vi'
+alias cp='cp -vi'
+alias mv='mv -vi'
+alias ln='ln -vi'
+
+#######
+# git #
+#######
+alias sgi='onefetch -E'
+
+alias gd='git diff'
+alias gt='git restore'
+alias gs='git stash -p'
+alias gk='git checkout'
+alias gr='git rebase -i'
+alias gc='git commit --message'
+alias gpd='git push --dry-run'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+
+###########################################
+# Directory contents and file information #
+###########################################
+alias ls='ls --color'
+alias ll='ls -SAlh --color'
+alias lt='ls -Alth --color'
+alias lr='ls -RAlh --color'
+
+######################
+# Network management #
+######################
+alias ac='nmcli connection up'
+alias dc='nmcli connection down'
+
+alias mw='nmcli radio wifi'
+alias lw='nmcli dev wifi list'
+alias cw='nmcli --ask dev wifi connect'
+
+#################
+# Documentation #
+#################
+alias sm='man -k'
+alias info='info --vi-keys'
+
+##############################
+# Image and document viewing #
+##############################
+alias img='nsxiv -aptf'
+alias z='zathura --fork'
+
+#######
+# SSH #
+#######
+alias kssh='kitty +kitten ssh'
+
+#################
+# File checking #
+#################
+alias scc='shellcheck -W 0 -f gcc'
+alias chktab='findmnt --verbose -x'
+
+#############
+# Clipboard #
+#############
+alias printc='xsel -ob'
+alias appendc='xsel -ab'
+
+#################
+# Uncategorized #
+#################
+alias v='nvim'
+alias cn='dunstctl close-all'
+alias anacrontab="${EDITOR} ${HOME}/.local/etc/anacrontab"
+alias t="\time --format '\nReal: %E   User-mode: %U   Kernel-mode: %S   Exit code: %x' --"

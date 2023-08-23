@@ -1,0 +1,7 @@
+[Unit]
+Description = User log rotation
+
+ConditionACPower = 1
+
+[Service]
+ExecStart = logrotate -s %E/logrotate/logrotate.status %E/logrotate/logrotate.conf

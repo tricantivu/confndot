@@ -1,0 +1,8 @@
+[Unit]
+Description = Name resolution
+
+[Service]
+StandardError = null
+StandardOutput = null
+
+ExecStart = resolvectl query gnu.org

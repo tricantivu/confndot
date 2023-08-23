@@ -1,0 +1,10 @@
+RANDOM_DELAY=10
+START_HOURS_RANGE=7-23
+
+NO_MAIL_OUTPUT=true
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+@monthly 0 cron.monthly run-parts ~/.local/etc/cron.monthly
+@weekly  0 cron.weekly  run-parts ~/.local/etc/cron.weekly
+@daily   0 cron.daily   run-parts ~/.local/etc/cron.daily

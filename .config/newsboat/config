@@ -1,0 +1,26 @@
+include "/usr/share/doc/newsboat/contrib/colorschemes/gruvbox"
+include "~/.config/newsboat/config.d/keybindings"
+
+notify-program "notify-send -u low -a newsboat"
+notify-format "%d new articles"
+
+confirm-mark-all-feeds-read        yes
+confirm-mark-feed-read              no
+confirm-exit                       yes
+
+feed-sort-order unreadarticlecount-asc
+
+refresh-on-startup                 yes
+
+error-log "~/.local/share/state/newsboat/error.log"
+
+datetime-format " %d/%m/%y"
+
+download-timeout 60
+download-retries 2
+
+history-limit 0
+
+reload-time 180
+
+highlight-article "title =~ \"CVE-[0-9]+-[0-9]+|CWE-[0-9]+\" or content =~ \"CVE-[0-9]+-[0-9]+|CWE-[0-9]+|CVSS [0-9]\\.?[0-9]?|security (flaw|vulnerability)\"" color226 default protect

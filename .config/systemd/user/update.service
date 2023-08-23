@@ -1,0 +1,18 @@
+[Unit]
+Description = Package upgrade
+
+After = name-resolv.target graphical-session.target
+Requires = name-resolv.target graphical-session.target
+
+AssertACPower = 1
+
+[Service]
+Type = oneshot
+
+CPUQuota = 75%
+MemoryHigh = 55%
+
+StandardOutput = null
+
+ExecStartPre = %h/.local/bin/cmpbootc -l 3
+ExecStart = %h/.local/bin/pip-update sdist

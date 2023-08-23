@@ -1,0 +1,8 @@
+[Unit]
+Description = Package upgrade
+
+[Timer]
+OnBootSec = 45 minutes
+
+[Install]
+WantedBy = timers.target

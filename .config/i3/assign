@@ -1,0 +1,9 @@
+assign [class="^Falkon$"] $workspace1
+assign [class="^chromium$"] $workspace1
+assign [class="^qutebrowser$"] $workspace1
+assign [class="(?i)^minecraft.*$"] $workspace5
+assign [class="thunderbird"] $workspace4
+assign [class="libreoffice"] $workspace2
+assign [class="KeePassXC"] $workspace3
+assign [class="discord"] $workspace6
+assign [class="kitty"] $workspace2
