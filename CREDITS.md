@@ -2,6 +2,11 @@
 
     * https://wiki.gentoo.org/wiki/Polybar#Create_a_Polybar_launch_script
 
+* `.config/nvim/init.vim`
+
+    * https://vi.stackexchange.com/a/17876
+    * https://www.reddit.com/r/neovim/comments/ncv6oj/comment/gy77nhx
+
 * `.config/i3/config`
 
     * https://faq.i3wm.org/question/339/switch-between-workspace-nextprevious/index.html

@@ -31,11 +31,6 @@ set guioptions-=m
 
 hi MatchParen cterm=underline,bold
 
-" Transparency.
-"
-" Credits to: u/Itwist101
-" URL: https://www.reddit.com/r/neovim/comments/ncv6oj/comment/gy77nhx/?utm_source=share&utm_medium=web2x&context=3
-"
 hi Normal ctermbg=none guibg=none
 hi Folded ctermbg=none guibg=none
 hi NonText ctermbg=none guibg=none
@@ -75,8 +70,6 @@ set encoding=utf-8
 set laststatus=2
 set statusline=%t\ %-y\ \|\ (%l,\ %v,\ %p%%)\ \|\ %{strftime('%d/%m/%y\ %T')}\ \|
 
-" Credits to: Christian Brabandt
-" URL: https://vi.stackexchange.com/a/17876
 call timer_start(1000, {-> execute(':let &stl=&stl')}, {'repeat': -1})
 
 """""""""""""""""""""""""
