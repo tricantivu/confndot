@@ -11,7 +11,7 @@ UMask = 0077
 
 Nice = 0
 CPUQuota = 80%
-MemoryHigh = 60%
+MemoryHigh = 30%
 IOSchedulingPriority = 3
 IOSchedulingClass = best-effort
 
