@@ -16,8 +16,6 @@ catch "/Unknown function/"
 
 endtry
 
-autocmd BufNewFile,BufReadPre *.md set tw=80
-
 autocmd BufReadPre,BufNewFile *.bash,*.sh set mp=shellcheck\ -f\ gcc\ -x
 
 try
