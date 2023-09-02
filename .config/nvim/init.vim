@@ -22,7 +22,7 @@ try
     b:editorconfig["trim_trailing_whitespace"]
 
 catch
-    autocmd BufWritePre,BufLeave * :%s/\s\+$//e
+    autocmd BufWritePre,BufLeave,QuitPre * :%s/\s\+$//e
 
 endtry
 
