@@ -10,7 +10,7 @@ AssertACPower = 1
 Type = oneshot
 
 CPUQuota = 75%
-MemoryHigh = 55%
+MemoryHigh = 25%
 
 StandardOutput = null
 
