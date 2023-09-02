@@ -10,7 +10,7 @@ AssertFileNotEmpty = %h/exclude
 UMask = 0077
 
 Nice = 0
-CPUQuota = 80%
+CPUQuota = 45%
 MemoryHigh = 30%
 IOSchedulingPriority = 3
 IOSchedulingClass = best-effort
