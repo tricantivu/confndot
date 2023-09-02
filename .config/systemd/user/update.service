@@ -9,7 +9,7 @@ AssertACPower = 1
 [Service]
 Type = oneshot
 
-CPUQuota = 75%
+CPUQuota = 40%
 MemoryHigh = 25%
 
 StandardOutput = null
