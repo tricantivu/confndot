@@ -16,7 +16,7 @@ catch "/Unknown function/"
 
 endtry
 
-autocmd BufReadPre,BufNewFile *.bash,*.sh set mp=shellcheck\ -f\ gcc\ -x
+autocmd FileType sh set mp=shellcheck\ -f\ gcc\ -x
 
 try
     b:editorconfig["trim_trailing_whitespace"]
