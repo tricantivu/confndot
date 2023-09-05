@@ -131,9 +131,9 @@ mode "Resize" {
         bindsym Up    resize shrink height  $container_step px or $container_step ppt
         bindsym Left  resize grow width     $container_step px or $container_step ppt
 
-        bindsym Return mode              "default"
-        bindsym Escape mode              "default"
-        bindsym $mod+r mode              "default"
+        bindsym Return mode                 "default"
+        bindsym Escape mode                 "default"
+        bindsym $mod+r mode                 "default"
 }
 
 bindsym $mod+r mode "Resize"
