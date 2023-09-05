@@ -59,9 +59,6 @@ bindsym $mod+Shift+x gaps outer current minus $step
 bindsym $mod+i       gaps inner current plus $step
 bindsym $mod+Shift+i gaps inner current minus $step
 
-# Uncomment if you're using i3-gaps-rounded
-# border_radius 15
-
 ##########
 # Colors #
 ##########
