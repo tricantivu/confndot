@@ -120,13 +120,13 @@ bindsym $mod+F8 fullscreen toggle
 
 mode "Resize" {
         bindsym l     resize shrink width   5 px or 5 ppt
-        bindsym j     resize grow height    5 px or 5 ppt
-        bindsym k     resize shrink height  5 px or 5 ppt
+        bindsym k     resize grow height    5 px or 5 ppt
+        bindsym j     resize shrink height  5 px or 5 ppt
         bindsym h     resize grow width     5 px or 5 ppt
 
         bindsym Right resize shrink width   5 px or 5 ppt
-        bindsym Up    resize grow height    5 px or 5 ppt
-        bindsym Down  resize shrink height  5 px or 5 ppt
+        bindsym Down  resize grow height    5 px or 5 ppt
+        bindsym Up    resize shrink height  5 px or 5 ppt
         bindsym Left  resize grow width     5 px or 5 ppt
 
         bindsym Return mode              "default"
