@@ -51,13 +51,13 @@ default_border pixel 10
 gaps inner 10
 gaps outer 5
 
-set $step 5
+set $gap_step 5
 
-bindsym $mod+x       gaps outer current plus $step
-bindsym $mod+Shift+x gaps outer current minus $step
+bindsym $mod+x       gaps outer current plus $gap_step
+bindsym $mod+Shift+x gaps outer current minus $gap_step
 
-bindsym $mod+i       gaps inner current plus $step
-bindsym $mod+Shift+i gaps inner current minus $step
+bindsym $mod+i       gaps inner current plus $gap_step
+bindsym $mod+Shift+i gaps inner current minus $gap_step
 
 ##########
 # Colors #
