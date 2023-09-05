@@ -118,16 +118,18 @@ bindsym $mod+v split v
 bindsym $mod+f floating toggle
 bindsym $mod+F8 fullscreen toggle
 
-mode "Resize" {
-        bindsym l     resize shrink width   5 px or 5 ppt
-        bindsym k     resize grow height    5 px or 5 ppt
-        bindsym j     resize shrink height  5 px or 5 ppt
-        bindsym h     resize grow width     5 px or 5 ppt
+set $container_step 5
 
-        bindsym Right resize shrink width   5 px or 5 ppt
-        bindsym Down  resize grow height    5 px or 5 ppt
-        bindsym Up    resize shrink height  5 px or 5 ppt
-        bindsym Left  resize grow width     5 px or 5 ppt
+mode "Resize" {
+        bindsym l     resize shrink width   $container_step px or $container_step ppt
+        bindsym k     resize grow height    $container_step px or $container_step ppt
+        bindsym j     resize shrink height  $container_step px or $container_step ppt
+        bindsym h     resize grow width     $container_step px or $container_step ppt
+
+        bindsym Right resize shrink width   $container_step px or $container_step ppt
+        bindsym Down  resize grow height    $container_step px or $container_step ppt
+        bindsym Up    resize shrink height  $container_step px or $container_step ppt
+        bindsym Left  resize grow width     $container_step px or $container_step ppt
 
         bindsym Return mode              "default"
         bindsym Escape mode              "default"
