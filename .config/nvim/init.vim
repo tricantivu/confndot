@@ -9,10 +9,16 @@ try
 
     call plug#end()
 
-    colorscheme dracula
-
 catch "/Unknown function/"
     echo "vim-plug is misconfigured or missing"
+
+endtry
+
+try
+    colorscheme dracula
+
+catch "/Cannot find color scheme/"
+    echo "Failed to set color scheme"
 
 endtry
 
