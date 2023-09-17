@@ -77,6 +77,7 @@ set $savoy_blue       #4B61D1
 set $cyan_blue_shade  #40649B
 
 # Greens
+set $neon_green       #39FF14
 set $charleston_green #232B2B
 
 # Whites
@@ -87,8 +88,8 @@ set $white            #FFFFFF
 ##############
 font pango:Source Code Pro Bold 11
 
-client.focused    $cyan_blue_shade $cyan_blue_shade $white     $black            $cyan_blue_shade
-client.unfocused  $spanish_gray    $charcoal_gray   $dark_gray $charleston_green $jet_gray
+client.focused    $neon_green   $cyan_blue_shade $white     $black            $cyan_blue_shade
+client.unfocused  $spanish_gray $charcoal_gray   $dark_gray $charleston_green $jet_gray
 
 floating_modifier $mod
 
