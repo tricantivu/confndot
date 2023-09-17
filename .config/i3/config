@@ -76,9 +76,6 @@ set $black            #000000
 set $savoy_blue       #4B61D1
 set $cyan_blue_shade  #40649B
 
-# Yellows
-set $pantone_yellow   #FEDF00
-
 # Greens
 set $charleston_green #232B2B
 
