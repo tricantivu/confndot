@@ -116,7 +116,6 @@ nnoremap <silent> <F8>  :setlocal spell! spelllang=en_us<CR>
 """""""""""""""""""""""""
 "         Panes         "
 """""""""""""""""""""""""
-
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
