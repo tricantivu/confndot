@@ -88,7 +88,7 @@ set $white            #FFFFFF
 ##############
 font pango:Source Code Pro Bold 11
 
-client.focused    $neon_green   $cyan_blue_shade $white     $black            $cyan_blue_shade
+client.focused    $neon_green   $cyan_blue_shade $white     $black            $neon_green
 client.unfocused  $spanish_gray $charcoal_gray   $dark_gray $charleston_green $jet_gray
 
 floating_modifier $mod
