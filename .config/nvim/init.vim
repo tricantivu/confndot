@@ -24,14 +24,6 @@ endtry
 
 autocmd FileType sh set mp=shellcheck\ -f\ gcc\ -x\ %
 
-try
-    b:editorconfig["trim_trailing_whitespace"]
-
-catch "/Undefined variable/"
-    autocmd BufWritePre,BufLeave,QuitPre * :%s/\s\+$//e
-
-endtry
-
 set guioptions-=T
 set guioptions-=m
 
