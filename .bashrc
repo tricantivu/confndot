@@ -31,4 +31,4 @@ type -P starship &> /dev/null && {
     eval "$(starship init bash)"
 }
 
-[[ -r "${HOME}/.aliases" && -s "${HOME}/.aliases" ]] && source "${HOME}/.aliases"
+source "${HOME}/.aliases" || exit
