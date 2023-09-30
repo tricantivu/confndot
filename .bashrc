@@ -1,3 +1,5 @@
+source /etc/bashrc || exit
+
 opts=(histappend
       huponexit
       checkjobs
