@@ -18,4 +18,5 @@ IOSchedulingPriority = 3
 IOSchedulingClass = best-effort
 
 ExecStart = notify-send -w -u critical -t 5000 '%f' 'The home directory "%h" is about to be backed up, please close all programs.'
+ExecStart = sleep 600
 ExecStart = duplicity full --encrypt-key 2A29133697A93CCEBCB69C4EF271A26A3948D34A --exclude-filelist %h/exclude %h file:///backups
