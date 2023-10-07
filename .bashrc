@@ -23,7 +23,7 @@ type -P mcfly &> /dev/null && {
     export MCFLY_INTERFACE_VIEW='BOTTOM'
 }
 
-export HISTCONTROL='ignorespace'
+HISTCONTROL='ignorespace'
 export HISTTIMEFORMAT='%d/%m/%Y   %T   '
 
 type -P starship &> /dev/null && {
