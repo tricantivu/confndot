@@ -24,7 +24,7 @@ type -P mcfly &> /dev/null && {
 }
 
 HISTCONTROL='ignorespace'
-export HISTTIMEFORMAT='%d/%m/%Y   %T   '
+HISTTIMEFORMAT='%d/%m/%Y   %T   '
 
 type -P starship &> /dev/null && {
 
