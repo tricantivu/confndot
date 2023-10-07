@@ -6,8 +6,6 @@
 #
 # 	 Made with figlet
 
-setopt C_PRECEDENCES
-
 #####################
 # File modification #
 #####################
@@ -41,6 +39,7 @@ setopt AUTO_CD
 #########################
 # Arithmetic evaluation #
 #########################
+setopt C_PRECEDENCES
 setopt OCTAL_ZEROES
 setopt C_BASES
 
