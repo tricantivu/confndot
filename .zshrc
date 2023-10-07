@@ -6,15 +6,15 @@
 #
 # 	 Made with figlet
 
-setopt c_precedences
+setopt C_PRECEDENCES
 
 # File modification
-unsetopt clobber
-setopt clobber_empty
+unsetopt CLOBBER
+setopt CLOBBER_EMPTY
 
 # Command history
-setopt hist_ignore_dups
-setopt share_history
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -22,22 +22,22 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # Pattern matching
-setopt numeric_glob_sort
-setopt rematch_pcre
-setopt nomatch
+setopt NUMERIC_GLOB_SORT
+setopt REMATCH_PCRE
+setopt NOMATCH
 
 # Navigating directories
-setopt cd_silent
-setopt auto_cd
+setopt CD_SILENT
+setopt AUTO_CD
 
 # Arithmetic
-setopt octal_zeroes
-setopt c_bases
+setopt OCTAL_ZEROES
+setopt C_BASES
 
 # Job control
-setopt check_jobs
-setopt check_running_jobs
-setopt notify
+setopt CHECK_JOBS
+setopt CHECK_RUNNING_JOBS
+setopt NOTIFY
 
 bindkey -v
 
