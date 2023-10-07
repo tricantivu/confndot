@@ -8,11 +8,15 @@
 
 setopt C_PRECEDENCES
 
-# File modification
+#####################
+# File modification #
+#####################
 unsetopt CLOBBER
 setopt CLOBBER_EMPTY
 
-# Command history
+###################
+# Command history #
+###################
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
 
@@ -21,20 +25,28 @@ SAVEHIST=10000
 
 HISTFILE=~/.zsh_history
 
-# Pattern matching
+####################
+# Pattern matching #
+####################
 setopt NUMERIC_GLOB_SORT
 setopt REMATCH_PCRE
 setopt NOMATCH
 
-# Navigating directories
+#########################
+# Filesystem navigation #
+#########################
 setopt CD_SILENT
 setopt AUTO_CD
 
-# Arithmetic
+#########################
+# Arithmetic evaluation #
+#########################
 setopt OCTAL_ZEROES
 setopt C_BASES
 
-# Job control
+###############
+# Job control #
+###############
 setopt CHECK_JOBS
 setopt CHECK_RUNNING_JOBS
 setopt NOTIFY
