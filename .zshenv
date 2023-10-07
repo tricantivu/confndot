@@ -47,9 +47,6 @@ whence -p brew &> /dev/null && {
     export HOMEBREW_CLEANUP_MAX_AGE_DAYS=20
 }
 
-[[ -f "${HOME}/.pythonrc" && -r "${HOME}/.pythonrc" ]] && {
-
-    export PYTHONSTARTUP="${HOME}/.pythonrc"
-}
+export PYTHONSTARTUP="${HOME}/.pythonrc"
 
 export QT_QPA_PLATFORMTHEME=qt5ct
