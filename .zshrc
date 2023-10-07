@@ -61,15 +61,9 @@ else
 fi
 
 # Shell plugins
-if [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-fi
-
-if [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-fi
+for plugin in /usr/share/zsh-{syntax-highlighting,autosuggestions}/*.zsh; do
+    source "${plugin}"
+done
 
 # Aliases
 alias history="history -t '| %d/%m/%Y  %T  (%Z, %z) |'"
