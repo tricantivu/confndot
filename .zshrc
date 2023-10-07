@@ -61,18 +61,12 @@ else
 fi
 
 # Shell plugins
-if [[ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-elif [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+if [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 fi
 
-if [[ -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-elif [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+if [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 fi
