@@ -1,3 +1,1 @@
-: "${HISTFILE:=$HOME/.zsh_history}"
-
-[[ -w "${HISTFILE}" && -s "${HISTFILE}" ]] && truncate -s 0 "${HISTFILE}"
+[[ -f "${HISTFILE}" && -w "${HISTFILE}" ]] && truncate -s 0 "${HISTFILE}"
