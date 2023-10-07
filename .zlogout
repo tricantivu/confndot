@@ -1,1 +1,1 @@
-[[ -f "${HISTFILE}" && -w "${HISTFILE}" ]] && truncate -s 0 "${HISTFILE}"
+[[ -v HISTFILE && -n "${HISTFILE}" ]] && truncate -s 0 "${HISTFILE}"
