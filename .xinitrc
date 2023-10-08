@@ -86,14 +86,6 @@ else
 
 fi
 
-# Log verbose output
-readonly WM_LOG="$(mktemp '/tmp/i3.XXXXXX.log')"
+readonly WM_STDERR_LOG="$(mktemp '/tmp/wm.XXXXXX.log')"
 
-exec i3 -V > "${WM_LOG}" || [ $? -eq 127 ] && {
-
-    die "i3 window manager is not installed, edit '${0##*/}' or install it"
-
-    rm -- "${WM_LOG}" 1> /dev/null 2>&1
-
-    exit 1
-}
+exec i3 -V 2> "${WM_STDERR_LOG}" || exit
