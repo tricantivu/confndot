@@ -36,16 +36,13 @@ umask 077
 
 readonly TMP="$(mktemp "/tmp/${0##*/}.XXXXXX")"
 
-[ -r "${HOME}/.Xresources" ] && [ -s "${HOME}/.Xresources" ] && {
+if isinpath xrdb; then
+    xrdb -load "${HOME}/.Xresources"
 
-    if isinpath xrdb; then
-        xrdb -load "${HOME}/.Xresources"
+else
+    die 'xrdb is not installed' 2> "${TMP}"
 
-    else
-        die 'xrdb is not installed' 2> "${TMP}"
-
-    fi
-}
+fi
 
 # Key repetition
 if isinpath xset; then
