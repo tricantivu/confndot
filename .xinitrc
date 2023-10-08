@@ -34,7 +34,7 @@ match() {
 
 umask 077
 
-readonly TMP="$(mktemp "/tmp/${0##*/}.XXXXXX")"
+readonly TMP_CMD_OUTFILE="$(mktemp "/tmp/${0##*/}.XXXXXX")"
 
 if isinpath xrdb; then
     xrdb -load "${HOME}/.Xresources"
@@ -65,7 +65,7 @@ fi
 # Configure screen outputs
 if isinpath xrandr; then
     # Read xrandr output line by line
-    xrandr > "${TMP}"
+    xrandr > "${TMP_CMD_OUTFILE}"
 
     while read -r l; do
 
@@ -79,7 +79,7 @@ if isinpath xrandr; then
             xrandr --output eDP1 --primary
         }
 
-    done < "${TMP}"
+    done < "${TMP_CMD_OUTFILE}"
 
 else
     die 'xrandr is not installed' 2> "${TMP}"
