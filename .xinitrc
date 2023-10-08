@@ -1,8 +1,4 @@
 #!/usr/bin/env sh
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
 
 umask 077
 
