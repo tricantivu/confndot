@@ -20,21 +20,7 @@ isinpath() {
     fi
 }
 
-match() {
-
-    case "$1" in
-        ($2)
-
-            return 0
-        ;;
-    esac
-
-    return 1
-}
-
 umask 077
-
-readonly TMP_CMD_OUTFILE="$(mktemp "/tmp/${0##*/}.XXXXXX")"
 
 if isinpath xrdb; then
     xrdb -load "${HOME}/.Xresources"
@@ -64,22 +50,7 @@ fi
 
 # Configure screen outputs
 if isinpath xrandr; then
-    # Read xrandr output line by line
-    xrandr > "${TMP_CMD_OUTFILE}"
-
-    while read -r l; do
-
-        match "${l}" 'HDMI* connected*' && {
-
-            xrandr --output "${l%%' '*}" --right-of eDP1 --primary
-        }
-
-        match "${l}" 'HDMI* disconnected*' && {
-
-            xrandr --output eDP1 --primary
-        }
-
-    done < "${TMP_CMD_OUTFILE}"
+    xrandr | grep -Eq 'HDMI disconnected' && xrandr --output eDP1 --primary
 
 else
     die 'xrandr is not installed' 2> "${TMP}"
