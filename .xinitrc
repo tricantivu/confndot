@@ -4,58 +4,22 @@
 #
 # Executed by startx (run your window manager from here)
 
-die() {
-
-    printf 'error: %s: %s\n' "${0##*/}" "$*" >&2
-}
-
-isinpath() {
-
-    if command -vp -- "$1" 1> /dev/null 2>&1; then
-        return 0
-
-    else
-        return 1
-
-    fi
-}
-
 umask 077
 
-if isinpath xrdb; then
-    xrdb -load "${HOME}/.Xresources"
+for cmd in xset xrdb xrandr setxkbmap; do
+    command -p "${cmd}" >&- 2>&- || exit
+done
 
-else
-    die 'xrdb is not installed' 2> "${TMP}"
-
-fi
+xrdb -load "${HOME}/.Xresources"
 
 # Key repetition
-if isinpath xset; then
-    xset r rate 400 35
-
-else
-    die 'xset is not installed' 2> "${TMP}"
-
-fi
+xset r rate 400 35
 
 # Keyboard layout
-if isinpath setxkbmap; then
-    setxkbmap -layout latam
-
-else
-    die 'setxkbmap is not installed' 2> "${TMP}"
-
-fi
+setxkbmap -layout latam
 
 # Configure screen outputs
-if isinpath xrandr; then
-    xrandr | grep -Eq 'HDMI disconnected' && xrandr --output eDP1 --primary
-
-else
-    die 'xrandr is not installed' 2> "${TMP}"
-
-fi
+xrandr | grep -Eq 'HDMI disconnected' && xrandr --output eDP1 --primary
 
 readonly WM_STDERR_LOG="$(mktemp '/tmp/wm.XXXXXX.log')"
 
