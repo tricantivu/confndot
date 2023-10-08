@@ -6,7 +6,7 @@
 
 die() {
 
-    printf "error: ${0##*/}: %s\n" "$*" >&2
+    printf 'error: %s: %s\n' "${0##*/}" "$*" >&2
 }
 
 isinpath() {
