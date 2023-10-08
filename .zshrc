@@ -92,5 +92,3 @@ s() {
 
     ssh-add
 }
-
-bindkey -s '^u' 'mpv --play-dir=forward --loop-playlist=inf ~/Music\n'
