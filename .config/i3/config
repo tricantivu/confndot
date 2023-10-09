@@ -114,7 +114,7 @@ bindsym $mod+v split v
 
 # Modes
 bindsym $mod+f floating toggle
-bindsym $mod+F8 fullscreen toggle
+bindsym $mod+F11 fullscreen toggle
 
 set $container_step 5
 
