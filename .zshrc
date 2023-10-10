@@ -79,7 +79,7 @@ done
 # Aliases
 alias history="history -t '| %d/%m/%Y  %T  (%Z, %z) |'"
 
-[[ -f ~/.aliases && -s ~/.aliases ]] && source ~/.aliases
+source ~/.aliases
 
 # Configure SSH
 s() {
