@@ -49,4 +49,4 @@ whence -p brew &> /dev/null && {
 
 export PYTHONSTARTUP="${HOME}/.pythonrc"
 
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME='qt5ct'
