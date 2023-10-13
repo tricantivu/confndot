@@ -22,7 +22,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+b exec qutebrowser
 
 bindsym $mod+g exec screenshot -m grab
-bindsym $mod+n exec screenshot -m normal
+bindsym $mod+n exec scrot -zi -F '/tmp/screenshot-$wx$h-%T-%d-%m-%Y.png' && notify-send -a scrot -t 5000 -u low 'System event' 'Saved screenshot'
 
 bindsym $mod+p exec keepassxc
 
