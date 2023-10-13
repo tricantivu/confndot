@@ -19,4 +19,4 @@ xrandr | grep -Eq 'HDMI disconnected' && xrandr --output eDP1 --primary
 
 readonly WM_STDERR_LOG="$(mktemp '/tmp/wm.XXXXXX.log')"
 
-exec i3 -V 2> "${WM_STDERR_LOG}" || exit
+exec i3 2> "${WM_STDERR_LOG}" || exit
