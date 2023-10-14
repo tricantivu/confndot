@@ -35,11 +35,9 @@ jobs:
         run: >
           sudo apt-get install duplicity
 
-          mkdir -pv "${HOME}/.local/bin"
+          mkdir -pv "${HOME}/.local/bin" "${HOME}/.config/systemd/user"
 
           cp -v .local/bin/* "${HOME}/.local/bin"
-
-          mkdir -pv "${HOME}/.config/systemd/user"
 
           files=( .config/systemd/user/* )
 
