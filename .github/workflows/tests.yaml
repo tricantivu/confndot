@@ -48,17 +48,17 @@ jobs:
 
           files=( .config/systemd/user/* )
 
-          for f in "${files[@]}"; do
+          for file in "${files[@]}"; do
 
-              cp -v "${f}" "${HOME}/.config/systemd/user"
+              cp -v "${file}" "${HOME}/.config/systemd/user"
 
           done
 
           systemctl --user daemon-reload
 
-          for u in "${files[@]##*/}"; do
+          for unit in "${files[@]##*/}"; do
 
-              if systemd-analyze --user verify -- "${u}"; then
+              if systemd-analyze --user verify -- "${unit}"; then
                   continue
 
               else
