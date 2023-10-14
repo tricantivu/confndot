@@ -41,9 +41,7 @@ jobs:
 
           files=( .config/systemd/user/* )
 
-          for file in "${files[@]}"; do
-              cp -v "${file}" "${HOME}/.config/systemd/user"
-          done
+          cp -v "${files[@]}" "${HOME}/.config/systemd/user"
 
           systemctl --user daemon-reload
 
