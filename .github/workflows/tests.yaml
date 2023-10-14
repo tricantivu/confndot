@@ -70,7 +70,6 @@ jobs:
 
       - name: "rofi"
         run: >
-
           sudo apt-get install rofi
 
           # Prevents unexisting file errors
