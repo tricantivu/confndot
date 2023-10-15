@@ -35,13 +35,13 @@ jobs:
         run: >
           sudo apt-get install duplicity
 
-          mkdir -pv "${HOME}/.local/bin" "${HOME}/.config/systemd/user"
+          mkdir -pv ~/.local/bin ~/.config/systemd/user
 
-          cp -v .local/bin/* "${HOME}/.local/bin"
+          cp -v .local/bin/* ~/.local/bin
 
           files=( .config/systemd/user/* )
 
-          cp -v "${files[@]}" "${HOME}/.config/systemd/user"
+          cp -v "${files[@]}" ~/.config/systemd/user
 
           systemctl --user daemon-reload
 
