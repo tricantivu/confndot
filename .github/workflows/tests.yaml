@@ -45,13 +45,7 @@ jobs:
 
           systemctl --user daemon-reload
 
-          for unit in "${files[@]##*/}"; do
-              if systemd-analyze --user verify -- "${unit}"; then
-                  continue
-              else
-                  exit 1
-              fi
-          done
+          systemd-analyze --user verify -- "${files[@]##*/}"
 
       - name: "rofi"
         run: >
