@@ -51,8 +51,8 @@ jobs:
         run: >
           sudo apt-get install rofi
 
-          # Prevents unexisting file errors
-          mkdir -pv .local/share/rofi/themes
-          : > .local/share/rofi/themes/spotlight-dark.rasi
+          mkdir -pv ~/.config/rofi
 
-          rofi -rasi-validate .config/rofi/config.rasi
+          grep -vF '@theme' .config/rofi/config.rasi | cp /dev/stdin ~/.config/rofi/config.rasi
+
+          rofi -rasi-validate ~/.config/rofi/config.rasi
