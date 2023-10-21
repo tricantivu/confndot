@@ -1,5 +1,5 @@
 [Unit]
-Description = Backup home directory
+Description = Custom home directory backup
 
 [Timer]
 OnCalendar = monthly

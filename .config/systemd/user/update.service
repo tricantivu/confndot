@@ -1,5 +1,5 @@
 [Unit]
-Description = Package upgrade
+Description = Automatic package upgrades
 
 After = name-resolv.target graphical-session.target
 Requires = name-resolv.target graphical-session.target

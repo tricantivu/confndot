@@ -1,5 +1,5 @@
 [Unit]
-Description = Change desktop wallpaper
+Description = Automatic wallpaper change
 
 [Timer]
 Unit = wallee.service

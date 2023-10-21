@@ -1,5 +1,5 @@
 [Unit]
-Description = Name resolution
+Description = Name resolution test
 
 [Service]
 StandardError = null

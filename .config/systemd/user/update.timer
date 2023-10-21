@@ -1,5 +1,5 @@
 [Unit]
-Description = Package upgrade
+Description = Automatic package upgrades
 
 [Timer]
 OnBootSec = 45 minutes

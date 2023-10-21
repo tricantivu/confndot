@@ -1,5 +1,5 @@
 [Unit]
-Description = Backup home directory
+Description = Custom home directory backup
 
 Requires = graphical-session.target name-resolv.target
 After = graphical-session.target name-resolv.target

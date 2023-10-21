@@ -1,5 +1,5 @@
 [Unit]
-Description = Change desktop wallpaper
+Description = Automatic wallpaper change
 
 After = graphical-session.target
 Requires = graphical-session.target

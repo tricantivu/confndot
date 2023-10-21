@@ -1,5 +1,5 @@
 [Unit]
-Description = User log rotation
+Description = Rotate log files
 
 ConditionACPower = 1
 
