@@ -102,6 +102,7 @@ noremap  <silent> <C-c> "+y
 noremap  <silent> <C-p> "+p
 
 nnoremap <Leader>s :%s///g<Left><Left><Left>
+nnoremap <Leader>f o```<Esc>o```<Esc>O
 
 nnoremap <F7>  :source ""/init.vim . stdpath("config")<CR>
 nnoremap <silent> <F8>  :setlocal spell! spelllang=en_us<CR>
