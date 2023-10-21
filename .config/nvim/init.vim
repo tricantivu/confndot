@@ -101,7 +101,6 @@ nnoremap <silent> <A-p> :prev<CR>
 noremap  <silent> <C-c> "+y
 noremap  <silent> <C-p> "+p
 
-nnoremap _     :.,.+
 nnoremap <Leader>s :%s///g<Left><Left><Left>
 
 nnoremap <F7>  :source ""/init.vim . stdpath("config")<CR>
