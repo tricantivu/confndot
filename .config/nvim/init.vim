@@ -73,6 +73,8 @@ call timer_start(1000, {-> execute(':let &stl=&stl')}, {'repeat': -1})
 """""""""""""""""""""""""
 "       Mappings        "
 """""""""""""""""""""""""
+let mapleader = ","
+
 imap <Left>  <Nop>
 imap <Right> <Nop>
 imap <Up>    <Nop>
