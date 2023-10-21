@@ -33,7 +33,7 @@ jobs:
 
       - name: "systemd user units"
         run: >
-          sudo apt-get install duplicity
+          sudo apt-get install duplicity libnotify-bin
 
           mkdir -pv ~/.local/bin ~/.config/systemd/user
 
