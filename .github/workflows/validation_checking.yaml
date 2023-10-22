@@ -60,3 +60,9 @@ jobs:
           grep -vF '@theme' .config/rofi/config.rasi | cp /dev/stdin ~/.config/rofi/config.rasi
 
           rofi -rasi-validate ~/.config/rofi/config.rasi
+
+      - name: "Validate user anacrontab"
+        run: >
+          sudo apt-get install anacron
+
+          anacron -T .local/etc/anacrontab
