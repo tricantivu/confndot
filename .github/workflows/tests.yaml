@@ -21,7 +21,7 @@ jobs:
       run: shellcheck -S error -f gcc .local/bin/*
 
     - name: "Check .bashrc"
-      run: shellcheck -S error -f gcc -e SC2148 .bashrc
+      run: shellcheck -S error -f gcc -s bash .bashrc
 
   config-validation:
 
