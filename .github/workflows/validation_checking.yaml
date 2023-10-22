@@ -22,6 +22,12 @@ jobs:
       - name: "Check Bash startup files"
         run: shellcheck -x -S error -f gcc -s bash .bash*
 
+      - name: "Check ZSH startup files"
+        run: >
+          sudo apt-get install zsh
+
+          zsh -n .zsh*
+
   validation:
     runs-on: ubuntu-latest
 
