@@ -1,57 +1,55 @@
-name: "Tests"
+name: "Validation & Checking"
 
 on: push
 
 jobs:
-  shellcheck:
-
-    runs-on: ubuntu-22.04
-
-    steps:
-    - name: "Checkout repository"
-      uses: actions/checkout@main
-
-    - name: "Install ShellCheck"
-      run: sudo apt-get install shellcheck
-
-    - name: "Check anacron scripts"
-      run: shopt -s globstar && shellcheck -S error -f gcc .local/etc/cron.*/*
-
-    - name: "Check custom scripts"
-      run: shellcheck -S error -f gcc .local/bin/*
-
-    - name: "Check Bash startup files"
-      run: shellcheck -S error -x -f gcc -s bash .bash*
-
-  config-validation:
-
-    runs-on: ubuntu-22.04
+  checking:
+    runs-on: ubuntu-latest
 
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@main
 
-      - name: "systemd user units"
+      - name: "Install shellcheck"
+        run: sudo apt-get install shellcheck
+
+      - name: "Check shell scripts for anacron"
+        run: find .local/etc/cron.* -type f -exec shellcheck -S error -f gcc {} \;
+
+      - name: "Check personal shell scripts"
+        run: shellcheck -S error -f gcc .local/bin/*
+
+      - name: "Check Bash startup files"
+        run: shellcheck -x -S error -f gcc -s bash .bash*
+
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@main
+
+      - name: "Validate user systemd unit files"
         run: >
           sudo apt-get install duplicity libnotify-bin
 
-          mkdir -pv ~/.local/bin ~/.config/systemd/user
+          mkdir -p ~/.local/bin ~/.config/systemd/user
 
-          cp -v .local/bin/* ~/.local/bin
+          cp .local/bin/* ~/.local/bin
 
           files=( .config/systemd/user/* )
 
-          cp -v "${files[@]}" ~/.config/systemd/user
+          cp "${files[@]}" ~/.config/systemd/user
 
           systemctl --user daemon-reload
 
           systemd-analyze --user verify -- "${files[@]##*/}"
 
-      - name: "rofi"
+      - name: "Validate rofi configuration file"
         run: >
           sudo apt-get install rofi
 
-          mkdir -pv ~/.config/rofi
+          mkdir -p ~/.config/rofi
 
           grep -vF '@theme' .config/rofi/config.rasi | cp /dev/stdin ~/.config/rofi/config.rasi
 
