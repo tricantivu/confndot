@@ -20,8 +20,8 @@ jobs:
     - name: "Check custom scripts"
       run: shellcheck -S error -f gcc .local/bin/*
 
-    - name: "Check .bashrc"
-      run: shellcheck -S error -f gcc -s bash .bashrc
+    - name: "Check Bash startup files"
+      run: shellcheck -S error -x -f gcc -s bash .bash*
 
   config-validation:
 
