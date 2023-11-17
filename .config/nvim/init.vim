@@ -29,13 +29,13 @@ set guioptions-=m
 
 hi MatchParen cterm=underline,bold
 
-hi Normal ctermbg=none guibg=none
-hi Folded ctermbg=none guibg=none
-hi NonText ctermbg=none guibg=none
-hi SpecialKey ctermbg=none guibg=none
-hi VertSplit ctermbg=none guibg=none
-hi SignColumn ctermbg=none guibg=none
-hi EndOfBuffer ctermbg=none guibg=none
+hi Normal ctermbg=NONE guibg=NONE
+hi Folded ctermbg=NONE guibg=NONE
+hi NonText ctermbg=NONE guibg=NONE
+hi SpecialKey ctermbg=NONE guibg=NONE
+hi VertSplit ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
+hi EndOfBuffer ctermbg=NONE guibg=NONE
 
 syntax enable
 
