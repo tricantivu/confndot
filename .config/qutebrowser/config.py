@@ -64,6 +64,8 @@ config.bind("<Ctrl+Shift+o>", "config-edit")
 
 config.bind("<Ctrl+Shift+p>", "spawn --detach mpv --player-operation-mode=pseudo-gui {url}")
 
+config.bind("<Ctrl+l>", "clear-messages")
+
 # Per-site configurations
 with config.pattern("https://*.fandom.com/wiki/*") as p:
     p.content.javascript.enabled = False
