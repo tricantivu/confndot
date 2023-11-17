@@ -34,6 +34,8 @@ c.tabs.title.format = "{audio} {index}° {current_title}"
 
 c.completion.open_categories = ["searchengines", "quickmarks", "bookmarks", "history", "filesystem"]
 
+c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+
 # External commands
 c.editor.command = ["gvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
 
