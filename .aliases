@@ -115,6 +115,7 @@ alias appendc='xsel -ab'
 #################
 alias v='nvim'
 alias cn='dunstctl close-all'
+alias rmide='sudo hdparm -Y'
 alias vopen='sudo cryptsetup -t tcrypt open'
 alias anacrontab="${EDITOR} ${HOME}/.local/etc/anacrontab"
 alias t="\time --format '\nReal: %E   User-mode: %U   Kernel-mode: %S   Exit code: %x' --"
