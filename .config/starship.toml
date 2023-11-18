@@ -1,4 +1,4 @@
-format = "$username[@](bold italic #FFE314)$hostname $directory \\[($c )($python )($git_branch )$git_status\\] $character "
+format = "$username[@](bold italic #FFE314)$hostname $directory \\[($jobs )($c )($python )($git_branch )$git_status\\] $character "
 command_timeout = 3000
 
 [username]
@@ -18,6 +18,12 @@ format = "[$path](white)[$read_only]($read_only_style)"
 read_only_style = "bold #DC343B"
 truncation_symbol = ".../"
 truncate_to_repo = false
+
+[jobs]
+symbol = " "
+style = "fg:#E5E4E2"
+number_threshold = 1
+format = "[$symbol]($style) $number"
 
 [c]
 format = "[($name)( $version)]($style)"
