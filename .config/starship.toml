@@ -1,4 +1,4 @@
-format = "$username[@](bold italic #FFE314)$hostname $directory \\[($c )($python )$git_branch $git_status\\] $character "
+format = "$username[@](bold italic #FFE314)$hostname $directory \\[($c )($python )($git_branch )$git_status\\] $character "
 command_timeout = 3000
 
 [username]
