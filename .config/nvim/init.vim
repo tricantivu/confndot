@@ -22,7 +22,7 @@ catch "/Cannot find color scheme/"
 
 endtry
 
-autocmd FileType sh set mp=shellcheck\ -f\ gcc\ -x\ %
+autocmd FileType sh set mp=shellcheck\ %
 
 set guioptions-=T
 set guioptions-=m
