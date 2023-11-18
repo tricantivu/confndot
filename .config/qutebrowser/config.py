@@ -7,7 +7,8 @@ c.url.searchengines = {
     "ddgl": "https://lite.duckduckgo.com/lite/?q={}",
     "mg": "https://metager.org/meta/meta.ger3?eingabe={}",
     "qw": "https://www.qwant.com/?q={}&t=web",
-    "sp": "https://www.startpage.com/sp/search?query={}"
+    "sp": "https://www.startpage.com/sp/search?query={}",
+    "ss": "https://sepiasearch.org/search?search={}"
 }
 
 # Look and feel
