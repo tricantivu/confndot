@@ -4,4 +4,4 @@ umask 077
 
 polybar-msg cmd quit
 
-polybar mango |& tee --append /tmp/polybar.log & disown
+polybar mango |& tee --append "$(mktemp "/tmp/polybar.XXXXXX.log")" & disown
