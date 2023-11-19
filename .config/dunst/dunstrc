@@ -21,7 +21,7 @@ separator_color = auto
 markup = full
 transparency = 10
 font = BlexMono Nerd Font 10
-format = "(<i>%a</i>):\n\n<u>%s</u>\n\n<b><span color="black">%b</span></b>"
+format = "(<i>%a</i>):\n\n%s\n\n<b><span color="black">%b</span></b>"
 
 icon_path = /usr/share/icons/Moka/16x16/status:/usr/share/icons/Moka/16x16/devices:/usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
