@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 command -vp bleachbit 1> /dev/null 2>&1 || {
 

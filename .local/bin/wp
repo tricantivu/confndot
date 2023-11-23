@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 command -vp feh 1> /dev/null 2>&1 || exit 1
 
