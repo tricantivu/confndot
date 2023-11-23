@@ -26,7 +26,7 @@ bindsym $mod+n exec scrot -zi -F '/tmp/screenshot-$wx$h-%T-%d-%m-%Y.png' && noti
 
 bindsym $mod+p exec keepassxc
 
-bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+d exec rofi -show drun
 
 bindsym $mod+m exec minecraft-launcher
 
