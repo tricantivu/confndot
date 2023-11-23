@@ -3,7 +3,7 @@ set $mod Mod4
 ########################
 # Autostarted programs #
 ########################
-exec_always --no-startup-id "picom -b"
+exec_always --no-startup-id picom -b
 
 exec --no-startup-id nm-applet
 
