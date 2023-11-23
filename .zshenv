@@ -5,7 +5,6 @@ path=($path /home/alex/.local/bin /home/linuxbrew/.linuxbrew/bin)
 
 # Default programs
 export EDITOR='nvim'
-export SUDO_EDITOR='nvim'
 export BROWSER='qutebrowser'
 
 export MANPAGER='nvim +Man!'
