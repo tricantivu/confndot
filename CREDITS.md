@@ -12,10 +12,6 @@
     * https://faq.i3wm.org/question/339/switch-between-workspace-nextprevious/index.html
     * https://unix.stackexchange.com/questions/397100/i3wm-how-to-move-windows-between-monitors
 
-* `.bashrc`
-
-    * https://www.linuxhowtos.org/Tips%20and%20Tricks/ansi_escape_sequences.htm
-
 * `.zshenv`
 
     * https://www.reddit.com/r/neovim/comments/vsmwn6/help_with_nvim_as_manpager
