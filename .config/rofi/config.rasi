@@ -1,5 +1,4 @@
 configuration {
-
     modi: "drun,window,windowcd";
     font: "Montserrat 12";
     location: 6;
@@ -8,13 +7,11 @@ configuration {
     window-thumbnail: true;
 
   window {
-
     -matching: "regex";
     -window-format: "{w} {t}";
   }
 
   timeout {
-
     action: "kb-cancel";
     delay: 0;
   }
