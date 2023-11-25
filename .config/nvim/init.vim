@@ -66,7 +66,7 @@ set showmode
 set encoding=utf-8
 
 set laststatus=2
-set statusline=%t\ %-y\ \|\ (%l,\ %v,\ %p%%)\ \|\ %{strftime('%d/%m/%y\ %T')}\ \|
+set statusline=%F\ %-y\ \|\ (%l,\ %v,\ %p%%)\ \|\ %{strftime('%d/%m/%y\ %T')}\ \|
 
 call timer_start(1000, {-> execute(':let &stl=&stl')}, {'repeat': -1})
 
