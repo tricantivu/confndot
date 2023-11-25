@@ -26,9 +26,6 @@ type -P mcfly &> /dev/null && {
 HISTCONTROL="ignorespace"
 HISTTIMEFORMAT="%d/%m/%Y   %T   "
 
-type -P starship &> /dev/null && {
-
-    eval "$(starship init bash)"
-}
+type -P starship &> /dev/null && eval "$(starship init bash)"
 
 source "${HOME}/.aliases" || exit
