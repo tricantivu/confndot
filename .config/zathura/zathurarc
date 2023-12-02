@@ -1,3 +1,5 @@
+set inputbar-fg "#6CB4EE"
+
 set completion-highlight-bg "#7289DA"
 
 set show-hidden true
