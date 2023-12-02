@@ -20,7 +20,6 @@ try:
 except ModuleNotFoundError:
     ...
 
-
 c.changelog_after_upgrade = "patch"
 
 c.fonts.default_size = "14pt"
