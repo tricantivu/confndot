@@ -3,6 +3,7 @@ set show-hidden true
 set n-completion-items 10
 
 set statusbar-home-tilde true
+set statusbar-page-percent true
 
 set window-title-page true
 set window-title-basename true
