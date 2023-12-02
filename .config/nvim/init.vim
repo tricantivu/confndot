@@ -6,6 +6,7 @@ try
 
     Plug 'Mofiqul/dracula.nvim'
     Plug 'phanviet/vim-monokai-pro'
+    Plug 'lervag/vimtex'
 
     call plug#end()
 
@@ -21,6 +22,11 @@ catch "/Cannot find color scheme/"
     echo "Failed to set color scheme"
 
 endtry
+
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_method = 'latexmk'
+
+let maplocalleader = ","
 
 autocmd FileType sh set mp=shellcheck\ %
 
@@ -39,9 +45,7 @@ hi EndOfBuffer ctermbg=NONE guibg=NONE
 
 syntax enable
 
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 set wildmenu
 set wildmode="list:longest"
