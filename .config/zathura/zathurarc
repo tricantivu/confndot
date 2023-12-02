@@ -1,25 +1,54 @@
-set notification-error-bg "#BD2024"
-set notification-warning-bg "#EED202"
-
-set inputbar-fg "#6CB4EE"
-set inputbar-bg "#000000"
-
-set statusbar-bg "#4D4C5C"
-
-set completion-bg "#59515E"
-
-set completion-highlight-bg "#7289DA"
-
-set show-hidden true
-
-set n-completion-items 10
-
-set statusbar-home-tilde true
-set statusbar-page-percent true
-
-set window-title-page true
-set window-title-basename true
+set font "PxPlus IBM VGA8 Regular 16"
 
 set selection-clipboard clipboard
 
-set font "PxPlus IBM VGA8 Regular 16"
+##########
+# Colors #
+##########
+
+# Notifications #
+
+# Errors
+set notification-error-bg "#BD2024"
+
+# Warnings
+set notification-warning-bg "#EED202"
+
+# Bars #
+
+# Input
+set inputbar-fg "#6CB4EE"
+set inputbar-bg "#000000"
+
+# Status
+
+set statusbar-bg "#4D4C5C"
+
+# Completion #
+set completion-bg "#59515E"
+
+# Highlighting
+set completion-highlight-bg "#7289DA"
+
+########
+# Bars #
+########
+
+# Status #
+set statusbar-home-tilde true
+
+set statusbar-page-percent true
+
+###########
+# Windows #
+###########
+set window-title-page true
+
+set window-title-basename true
+
+##############
+# Completion #
+##############
+set show-hidden true
+
+set n-completion-items 10
