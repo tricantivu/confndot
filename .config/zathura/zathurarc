@@ -1,3 +1,5 @@
+set completion-highlight-bg "#7289DA"
+
 set show-hidden true
 
 set n-completion-items 10
