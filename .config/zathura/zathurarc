@@ -6,6 +6,8 @@ set inputbar-bg "#000000"
 
 set statusbar-bg "#4D4C5C"
 
+set completion-bg "#59515E"
+
 set completion-highlight-bg "#7289DA"
 
 set show-hidden true
