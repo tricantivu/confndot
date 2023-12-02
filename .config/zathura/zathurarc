@@ -1,3 +1,4 @@
+set notification-error-bg "#BD2024"
 set notification-warning-bg "#EED202"
 
 set inputbar-fg "#6CB4EE"
