@@ -2,6 +2,9 @@ set notification-error-bg "#BD2024"
 set notification-warning-bg "#EED202"
 
 set inputbar-fg "#6CB4EE"
+set inputbar-bg "#000000"
+
+set statusbar-bg "#131313"
 
 set completion-highlight-bg "#7289DA"
 
