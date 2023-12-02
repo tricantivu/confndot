@@ -59,11 +59,13 @@ config.bind("<Ctrl+Shift+m>", "bookmark-del")
 config.unbind('Sb', mode='normal')
 config.bind('<Ctrl+Shift+b>', 'bookmark-list --jump')
 
+config.bind("^", "move-to-start-of-line")
+
 if c.zoom.default == "100%":
-    config.bind("<Ctrl+0>", "zoom -q")
+    config.bind("0", "zoom -q")
 
 else:
-    config.bind("<Ctrl+0>", "zoom -q 100")
+    config.bind("0", "zoom -q 100")
 
 config.bind("<Ctrl+Shift+o>", "config-edit")
 
