@@ -69,6 +69,8 @@ else:
 
 config.bind(",ce", "config-edit")
 
+config.bind(",cs", "config-source")
+
 config.bind(",p", "spawn --detach mpv --player-operation-mode=pseudo-gui {url}")
 
 config.bind("<Ctrl+l>", "clear-messages")
