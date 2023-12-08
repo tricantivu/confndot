@@ -2,7 +2,7 @@
 "       Plugins.        "
 """""""""""""""""""""""""
 try
-    call plug#begin('~/.local/share/nvim')
+    call plug#begin()
 
     Plug 'Mofiqul/dracula.nvim'
     Plug 'phanviet/vim-monokai-pro'
@@ -16,7 +16,11 @@ catch "/Unknown function/"
 endtry
 
 try
-    colorscheme dracula
+    if has('nvim')
+        colorscheme dracula
+    else
+        colorscheme monokai_pro
+    endif
 
 catch "/Cannot find color scheme/"
     echo "Failed to set color scheme"
