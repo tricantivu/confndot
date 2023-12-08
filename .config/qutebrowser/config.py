@@ -67,7 +67,7 @@ if c.zoom.default == "100%":
 else:
     config.bind("0", "zoom -q 100")
 
-config.bind("<Ctrl+Shift+o>", "config-edit")
+config.bind(",ce", "config-edit")
 
 config.bind(",p", "spawn --detach mpv --player-operation-mode=pseudo-gui {url}")
 
