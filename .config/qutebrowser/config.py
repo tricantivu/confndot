@@ -69,7 +69,7 @@ else:
 
 config.bind("<Ctrl+Shift+o>", "config-edit")
 
-config.bind("<Ctrl+Shift+p>", "spawn --detach mpv --player-operation-mode=pseudo-gui {url}")
+config.bind(",p", "spawn --detach mpv --player-operation-mode=pseudo-gui {url}")
 
 config.bind("<Ctrl+l>", "clear-messages")
 
