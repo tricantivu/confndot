@@ -1,4 +1,4 @@
-# vi: ft=sh ts=4 tw=90
+# vi: ft=sh ts=4 tw=79
 
 ###########
 # systemd #
@@ -38,7 +38,10 @@ alias fgrep='fgrep --color'
 alias diff="diff --color=always"
 alias pcregrep='pcregrep --color'
 
-alias findip="grep -E '(2[0-5]{1,2}|1?[0-9]{1,2})\.(2[0-5]{1,2}|1?[0-9]{1,2})\.(2[0-5]{1,2}|1?[0-9]{1,2})\.(2[0-5]{1,2}|1?[0-9]{1,2})'"
+alias findip="grep -E '(2[0-5]{1,2}|1?[0-9]{1,2})\.\
+                       (2[0-5]{1,2}|1?[0-9]{1,2})\.\
+                       (2[0-5]{1,2}|1?[0-9]{1,2})\.\
+                       (2[0-5]{1,2}|1?[0-9]{1,2})'"
 
 #####################
 # File manipulation #
@@ -118,4 +121,7 @@ alias cn='dunstctl close-all'
 alias rmide='sudo hdparm -Y'
 alias vopen='sudo cryptsetup -t tcrypt open'
 alias anacrontab="${EDITOR} ${HOME}/.local/etc/anacrontab"
-alias t="\time --format '\nReal: %E   User-mode: %U   Kernel-mode: %S   Exit code: %x' --"
+alias t="\time --format '\nReal: %E   \
+User-mode: %U   \
+Kernel-mode: %S   \
+Exit code: %x' --"
