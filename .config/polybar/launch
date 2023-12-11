@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-umask 077
-
 polybar-msg cmd quit
 
 polybar mango |& tee -a "$(mktemp -p "/tmp" "polybar.XXXXXXXXXXXX.log")" & disown
