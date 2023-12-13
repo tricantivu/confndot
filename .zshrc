@@ -16,6 +16,7 @@ setopt CLOBBER_EMPTY
 # Command history #
 ###################
 setopt HIST_IGNORE_DUPS
+setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
 
 HISTSIZE=10000
