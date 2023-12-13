@@ -52,6 +52,7 @@ setopt C_BASES
 ###############
 setopt CHECK_JOBS
 setopt CHECK_RUNNING_JOBS
+setopt LONG_LIST_JOBS
 setopt NOTIFY
 
 bindkey -v
