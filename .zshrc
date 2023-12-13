@@ -6,6 +6,8 @@
 #
 # 	 Made with figlet
 
+setopt RM_STAR_WAIT
+
 #####################
 # File modification #
 #####################
