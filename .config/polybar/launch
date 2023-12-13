@@ -2,4 +2,11 @@
 
 polybar-msg cmd quit
 
+# Preferably, use "short" options (e.g. "-h") and do not use the "--suffix"
+# option with the command "mktemp" because it is not portable with some
+# implementations. For more information:
+#
+# https://man.freebsd.org/cgi/man.cgi?query=mktemp&sektion=1&n=1
+# https://man.netbsd.org/mktemp.1
+# https://man.openbsd.org/mktemp
 polybar mango |& tee -a "$(mktemp -p "/tmp" "polybar.XXXXXXXXXXXX.log")" & disown
