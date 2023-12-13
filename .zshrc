@@ -28,6 +28,7 @@ HISTFILE=~/.zsh_history
 ####################
 setopt NUMERIC_GLOB_SORT
 setopt REMATCH_PCRE
+setopt GLOB_DOTS
 setopt NOMATCH
 
 #########################
