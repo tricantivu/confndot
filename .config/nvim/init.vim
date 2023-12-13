@@ -2,7 +2,7 @@
 "       Plugins.        "
 """""""""""""""""""""""""
 try
-    call plug#begin()
+    call plug#begin('~/.local/share/nvim')
 
     Plug 'Mofiqul/dracula.nvim'
     Plug 'phanviet/vim-monokai-pro'
