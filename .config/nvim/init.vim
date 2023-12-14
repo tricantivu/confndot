@@ -1,4 +1,11 @@
 """""""""""""""""""""""""
+"       Functions       "
+"""""""""""""""""""""""""
+function! GetFileType()
+    return strlen(&ft) ? &ft : "No file type"
+endfunction
+
+"""""""""""""""""""""""""
 "       Plugins.        "
 """""""""""""""""""""""""
 try
@@ -77,7 +84,7 @@ set encoding=utf-8
 
 set laststatus=2
 set statusline=%F
-set statusline+=\ %-y\ \|
+set statusline+=\ [%{GetFileType()}]\ \|
 set statusline+=\ (%l,\ %v,\ %p%%)\ Code\ point:\ %B\ \|
 set statusline+=\ %{strftime('%d/%m/%y\ %T')}\ \|
 
