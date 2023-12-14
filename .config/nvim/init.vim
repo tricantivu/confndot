@@ -78,7 +78,7 @@ set encoding=utf-8
 set laststatus=2
 set statusline=%F
 set statusline+=\ %-y\ \|
-set statusline+=\ (%l,\ %v,\ %p%%)\ \|
+set statusline+=\ (%l,\ %v,\ %p%%)\ Code\ point:\ %B\ \|
 set statusline+=\ %{strftime('%d/%m/%y\ %T')}\ \|
 
 call timer_start(1000, {-> execute(':let &stl=&stl')}, {'repeat': -1})
