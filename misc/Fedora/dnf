@@ -1,4 +1,4 @@
-Installed
+GConf2
 GraphicsMagick
 ImageMagick
 ImageMagick-libs
@@ -15,6 +15,7 @@ PackageKit-glib
 PackageKit-gstreamer-plugin
 SDL2
 ShellCheck
+VirtualBox-7.0
 aajohan-comfortaa-fonts
 aardvark-dns
 abattis-cantarell-fonts
@@ -47,6 +48,7 @@ alsa-ucm
 alsa-utils
 alternatives
 amd-gpu-firmware
+amd-ucode-firmware
 antiword
 arc-theme
 ascii
@@ -83,6 +85,7 @@ bind-license
 bind-utils
 binutils
 binutils-gold
+bison
 bluez
 bluez-cups
 bluez-libs
@@ -90,6 +93,7 @@ boost-regex
 botan2
 brcmfmac-firmware
 btrfs-progs
+byzanz
 bzip2
 bzip2-libs
 c-ares
@@ -109,6 +113,9 @@ cjson
 clang
 clang-libs
 clang-resource-filesystem
+cmake
+cmake-data
+cmake-filesystem
 codec2
 color-filesystem
 colord
@@ -159,6 +166,7 @@ daxctl-libs
 dbus
 dbus-broker
 dbus-common
+dbus-daemon
 dbus-glib
 dbus-libs
 dbus-tools
@@ -175,7 +183,6 @@ device-mapper-libs
 device-mapper-persistent-data
 dhcp-client
 dhcp-common
-dialog
 diffutils
 dmenu
 dmidecode
@@ -208,6 +215,7 @@ elfutils
 elfutils-debuginfod-client
 elfutils-default-yama-scope
 elfutils-libelf
+elfutils-libelf-devel
 elfutils-libs
 emacs-filesystem
 enchant2
@@ -241,8 +249,16 @@ firewalld
 firewalld-filesystem
 flac-libs
 flashrom
+flat-remix-gtk2-theme
+flat-remix-gtk3-theme
+flat-remix-gtk4-theme
 flatpak-session-helper
+flex
 flite
+fontawesome5-brands-fonts
+fontawesome5-fonts
+fontawesome5-fonts-all
+fontawesome5-free-fonts
 fontconfig
 fonts-filesystem
 fpaste
@@ -272,7 +288,6 @@ gcc-gdb-plugin
 gcr-libs
 gcr3-base
 gd
-gdb
 gdb-headless
 gdbm-libs
 gdisk
@@ -304,7 +319,7 @@ glibc-devel
 glibc-gconv-extra
 glibc-headers-x86
 glibc-langpack-en
-glibmm2
+glibmm2.4
 glx-utils
 gmp
 gnome-icon-theme
@@ -368,7 +383,7 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtk4
-gtkmm3
+gtkmm3.0
 gts
 guile22
 gupnp
@@ -452,6 +467,7 @@ js-jquery
 json-c
 json-glib
 jsoncpp
+julietaula-montserrat-fonts
 jxl-pixbuf-loader
 kbd
 kbd-legacy
@@ -463,6 +479,9 @@ kernel
 kernel-core
 kernel-core
 kernel-core
+kernel-devel
+kernel-devel
+kernel-devel
 kernel-headers
 kernel-modules
 kernel-modules
@@ -489,6 +508,7 @@ langpacks-core-en
 langpacks-core-font-en
 langpacks-en
 lasi
+latexmk
 lcms2
 leptonica
 less
@@ -637,6 +657,8 @@ libgsf
 libgudev
 libgusb
 libgxps
+libheif
+libheif-tools
 libibverbs
 libicu
 libidn2
@@ -667,6 +689,7 @@ libmaxminddb
 libmbim
 libmbim-utils
 libmd
+libmediainfo
 libmetalink
 libmnl
 libmodplug
@@ -779,6 +802,7 @@ libtiff
 libtirpc
 libtomcrypt
 libtommath
+libtool
 libtool-ltdl
 libtracker-sparql
 libtree-sitter
@@ -823,7 +847,9 @@ libxmlb
 libxshmfence
 libxslt
 libyaml
+libzen
 libzstd
+libzstd-devel
 lilv-libs
 linux-firmware
 linux-firmware-whence
@@ -849,7 +875,7 @@ lua
 lua-libs
 lua-posix
 luajit
-luajit2
+luajit2.1-luv
 lv2
 lvm2
 lvm2-dbusd
@@ -867,6 +893,7 @@ man-pages
 mbedtls
 mcelog
 mdadm
+megasync
 memstrack
 mesa-dri-drivers
 mesa-filesystem
@@ -951,9 +978,10 @@ opensc
 openssh
 openssh-clients
 openssh-server
+openssl-devel
 openssl-libs
 openssl-pkcs11
-openssl1
+openssl1.1
 opus
 orc
 os-prober
@@ -1428,6 +1456,7 @@ re2
 readline
 realmd
 realtek-firmware
+rhash
 rit-meera-new-fonts
 rofi
 rofi-themes
@@ -1442,6 +1471,23 @@ rpm-sign-libs
 rsync
 rtkit
 rubberband
+ruby
+ruby-default-gems
+ruby-libs
+rubygem-bigdecimal
+rubygem-bundler
+rubygem-io-console
+rubygem-json
+rubygem-kramdown
+rubygem-mustache
+rubygem-nokogiri
+rubygem-psych
+rubygem-racc
+rubygem-rdoc
+rubygem-rexml
+rubygem-ronn-ng
+rubygems
+rubypick
 samba-client
 samba-client-libs
 samba-common
@@ -1484,6 +1530,7 @@ speex
 spice-vdagent
 spice-webdavd
 spirv-tools-libs
+sqlite
 sqlite-libs
 squashfs-tools
 sratom
@@ -1528,6 +1575,7 @@ tesseract
 tesseract-langpack-eng
 tesseract-tessdata-doc
 texlive
+texlive-adjustbox
 texlive-ae
 texlive-algorithms
 texlive-alphalph
@@ -1536,6 +1584,7 @@ texlive-amsfonts
 texlive-amsmath
 texlive-anysize
 texlive-atbegshi
+texlive-atenddvi
 texlive-attachfile
 texlive-attachfile2
 texlive-atveryend
@@ -1543,13 +1592,17 @@ texlive-auto-pst-pdf
 texlive-auxhook
 texlive-avantgar
 texlive-babel
+texlive-babel-catalan
 texlive-babel-english
+texlive-babel-galician
+texlive-babel-spanish
 texlive-babelbib
 texlive-base
 texlive-beamer
 texlive-bera
 texlive-beton
 texlive-biblatex
+texlive-biblatex-apa
 texlive-bibtex
 texlive-bidi
 texlive-bigintcalc
@@ -1569,8 +1622,10 @@ texlive-cm
 texlive-cm-super
 texlive-cmap
 texlive-cmextra
+texlive-collectbox
 texlive-collection-basic
 texlive-collection-fontsrecommended
+texlive-collection-langspanish
 texlive-collection-latex
 texlive-collection-latexrecommended
 texlive-colorprofiles
@@ -1589,6 +1644,7 @@ texlive-enctex
 texlive-enumitem
 texlive-epstopdf
 texlive-epstopdf-pkg
+texlive-es-tex-faq-doc
 texlive-eso-pic
 texlive-etex
 texlive-etex-pkg
@@ -1617,6 +1673,8 @@ texlive-footmisc
 texlive-footnotehyper
 texlive-fp
 texlive-fpl
+texlive-framed
+texlive-fvextra
 texlive-geometry
 texlive-gettitlestring
 texlive-glyphlist
@@ -1634,8 +1692,12 @@ texlive-hycolor
 texlive-hyperref
 texlive-hyph-utf8
 texlive-hyphen-base
+texlive-hyphen-catalan
+texlive-hyphen-galician
+texlive-hyphen-spanish
 texlive-hyphenex
 texlive-ifmtarg
+texlive-ifoddpage
 texlive-ifplatform
 texlive-iftex
 texlive-index
@@ -1650,13 +1712,17 @@ texlive-kpathsea
 texlive-kvdefinekeys
 texlive-kvoptions
 texlive-kvsetkeys
+texlive-l2tabu-spanish-doc
 texlive-l3backend
 texlive-l3experimental
 texlive-l3kernel
 texlive-l3packages
 texlive-latex
 texlive-latex-fonts
+texlive-latex-uni8
+texlive-latex2e-help-texinfo-spanish
 texlive-latexbug
+texlive-latexcheat-esmx-doc
 texlive-latexconfig
 texlive-letltxmacro
 texlive-lib
@@ -1665,6 +1731,7 @@ texlive-listings
 texlive-lm
 texlive-lm-math
 texlive-logreq
+texlive-lshort-spanish-doc
 texlive-ltabptch
 texlive-ltxcmds
 texlive-ltxmisc
@@ -1677,6 +1744,7 @@ texlive-luaotfload
 texlive-luatex
 texlive-luatexbase
 texlive-lwarp
+texlive-makecell
 texlive-makecmds
 texlive-makeindex
 texlive-manfnt-font
@@ -1686,6 +1754,7 @@ texlive-mathpazo
 texlive-mathspec
 texlive-mathtools
 texlive-mdwtools
+texlive-media9
 texlive-memoir
 texlive-metafont
 texlive-metalogo
@@ -1695,6 +1764,7 @@ texlive-mfnfss
 texlive-mfware
 texlive-microtype
 texlive-minitoc
+texlive-minted
 texlive-mnsymbol
 texlive-modes
 texlive-mparhack
@@ -1707,6 +1777,7 @@ texlive-newfloat
 texlive-notoccite
 texlive-ntgclass
 texlive-oberdiek
+texlive-ocgx2
 texlive-pagesel
 texlive-palatino
 texlive-paralist
@@ -1759,6 +1830,7 @@ texlive-seminar
 texlive-sepnum
 texlive-setspace
 texlive-showexpl
+texlive-simplekv
 texlive-soul
 texlive-stringenc
 texlive-subfig
@@ -1767,11 +1839,13 @@ texlive-tex
 texlive-tex-gyre
 texlive-tex-gyre-math
 texlive-tex-ini-files
+texlive-texdoc
 texlive-texlive-common-doc
 texlive-texlive-en
+texlive-texlive-es-doc
 texlive-texlive-msg-translations
 texlive-texlive-scripts
-texlive-texlive
+texlive-texlive.infra
 texlive-textcase
 texlive-thumbpdf
 texlive-times
@@ -1788,6 +1862,7 @@ texlive-underscore
 texlive-unicode-data
 texlive-unicode-math
 texlive-uniquecounter
+texlive-upquote
 texlive-url
 texlive-utopia
 texlive-varwidth
@@ -1813,6 +1888,7 @@ thermald
 thunderbird
 thunderbird-librnp-rnp
 time
+tinyxml2
 toolbox
 totem-pl-parser
 tpm2-tools
@@ -1860,7 +1936,7 @@ util-linux-user
 vamp-plugin-sdk
 vapoursynth-libs
 vazirmatn-vf-fonts
-vid
+vid.stab
 vim-X11
 vim-common
 vim-data
@@ -1939,6 +2015,9 @@ xxhash-libs
 xz
 xz-libs
 yajl
+yaru-gtk2-theme
+yaru-gtk3-theme
+yaru-gtk4-theme
 yt-dlp
 yt-dlp-bash-completion
 yt-dlp-zsh-completion
@@ -1953,6 +2032,7 @@ zeromq
 zimg
 zip
 zlib
+zlib-devel
 zram-generator
 zram-generator-defaults
 zsh
