@@ -36,6 +36,8 @@ autocmd FileType sh set mp=shellcheck\ %
 
 set guioptions-=T
 set guioptions-=m
+set guioptions-=r
+set guioptions-=L
 
 hi MatchParen cterm=underline,bold
 
