@@ -41,10 +41,10 @@ USAGE
 
 err() {
 
-    printf '%s\n' "$*" >&2
+    printf "%s\n" "$*" >&2
 }
 
-declare -r ISO_TODAY_DATE="$(printf '%(%F)T')"
+declare -r ISO_TODAY_DATE="$(printf "%(%F)T")"
 declare -ar DEPENDENCIES=('last')
 
 for cmd in "${DEPENDENCIES[@]}"; do
@@ -101,7 +101,7 @@ while read -r line; do
 
     (( bootc++ ))
 
-done < <(last --since "${ISO_TODAY_DATE@P}" 'system boot' 2>&-)
+done < <(last --since "${ISO_TODAY_DATE@P}" "system boot" 2>&-)
 
 (( "${optc}" )) || {
 
@@ -139,7 +139,7 @@ ${lt_opt} && {
 
 (( bootc == 1 )) && {
 
-    echo 'System has only booted once'
+    echo "System has only booted once"
 
     exit 0
 }

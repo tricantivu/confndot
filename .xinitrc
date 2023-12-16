@@ -9,14 +9,14 @@ done
 xrdb -load "${HOME}/.Xresources"
 
 # Key repetition
-xset r rate 400 35
+xset "r" "rate" "400" "35"
 
 # Keyboard layout
-setxkbmap -layout latam
+setxkbmap -layout "latam"
 
 # Configure screen outputs
-xrandr | grep -Eq 'HDMI disconnected' && xrandr --output eDP1 --primary
+xrandr | grep -Eq "HDMI disconnected" && xrandr --output "eDP1" --primary
 
-readonly WM_STDERR_LOG="$(mktemp -p "/tmp" 'wm.XXXXXXXXXXXX')"
+readonly WM_STDERR_LOG="$(mktemp -p "/tmp" "wm.XXXXXXXXXXXX")"
 
 exec i3 2> "${WM_STDERR_LOG}" || exit

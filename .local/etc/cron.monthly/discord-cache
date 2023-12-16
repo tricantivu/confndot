@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-command -vp bleachbit 1> /dev/null 2>&1 || {
+command -vp "bleachbit" 1> /dev/null 2>&1 || {
 
-    printf 'error: missing %s command\n' 'bleachbit' >&2
+    printf "error: missing %s command\n" "bleachbit" >&2
 
     exit 1
 }
 
-exec bleachbit -c discord.cache
+exec bleachbit -c "discord.cache"
