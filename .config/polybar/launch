@@ -9,4 +9,6 @@ polybar-msg cmd quit
 # https://man.freebsd.org/cgi/man.cgi?query=mktemp&sektion=1&n=1
 # https://man.netbsd.org/mktemp.1
 # https://man.openbsd.org/mktemp
-polybar mango |& tee -a "$(mktemp -p "/tmp" "polybar.XXXXXXXXXXXX.log")" & disown
+readonly TMP_FILE_PATH="$(mktemp -p "/tmp" "polybar.XXXXXXXXXXXX.log")"
+
+polybar mango |& tee -a "${TMP_FILE_PATH}" & disown
