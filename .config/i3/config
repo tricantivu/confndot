@@ -9,7 +9,7 @@ exec --no-startup-id nm-applet
 
 exec_always wp ~/Pictures/Wallpapers
 
-exec_always --no-startup-id ~/.config/polybar/launch mango
+exec_always --no-startup-id ~/.config/polybar/launch -r mango
 
 exec --no-startup-id xss-lock i3lock -ef -p default -c 708090
 exec --no-startup-id xautolock -time 10 -locker i3lock -ef -p default -c 708090
