@@ -11,4 +11,4 @@ polybar-msg cmd quit
 # https://man.openbsd.org/mktemp
 readonly TMP_FILE_PATH="$(mktemp -p "/tmp" "polybar.XXXXXXXXXXXX.log")"
 
-polybar mango |& tee -a "${TMP_FILE_PATH}" & disown
+polybar "$@" |& tee -a "${TMP_FILE_PATH}" & disown
