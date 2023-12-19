@@ -123,3 +123,4 @@ User-mode: %U   \
 Kernel-mode: %S   \
 Exit code: %x' --"
 alias nlow='notify-send -u low'
+alias ncrit='notify-send -u critical'
