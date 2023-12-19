@@ -19,7 +19,6 @@ alias sf='systemctl --failed list-units'
 # Package management #
 ######################
 alias pi='pamac install'
-alias P='pacman -Syu'
 alias pa='pamac search --aur'
 
 #############
