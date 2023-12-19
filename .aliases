@@ -122,3 +122,4 @@ alias t="\time --format '\nReal: %E   \
 User-mode: %U   \
 Kernel-mode: %S   \
 Exit code: %x' --"
+alias nlow='notify-send -u low'
