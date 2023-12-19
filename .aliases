@@ -110,11 +110,18 @@ alias chktab='findmnt --verbose -x'
 alias printc='xsel -ob'
 alias appendc='xsel -ab'
 
+#########################
+# Desktop notifications #
+#########################
+alias nclear='dunstctl close-all'
+
+alias nlow='notify-send -u low'
+alias ncrit='notify-send -u critical'
+
 #################
 # Uncategorized #
 #################
 alias v='nvim'
-alias nclear='dunstctl close-all'
 alias rmide='sudo hdparm -Y'
 alias vopen='sudo cryptsetup -t tcrypt open'
 alias anacrontab="${EDITOR} ${HOME}/.local/etc/anacrontab"
@@ -122,5 +129,3 @@ alias t="\time --format '\nReal: %E   \
 User-mode: %U   \
 Kernel-mode: %S   \
 Exit code: %x' --"
-alias nlow='notify-send -u low'
-alias ncrit='notify-send -u critical'
