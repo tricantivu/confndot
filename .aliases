@@ -90,7 +90,7 @@ alias info='info --vi-keys'
 ##############################
 # Image and document viewing #
 ##############################
-alias img='nsxiv -aptf'
+alias n='nsxiv -aptf'
 alias z='zathura --fork'
 
 #######
