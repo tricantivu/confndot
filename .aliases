@@ -114,7 +114,7 @@ alias appendc='xsel -ab'
 # Uncategorized #
 #################
 alias v='nvim'
-alias cn='dunstctl close-all'
+alias nclear='dunstctl close-all'
 alias rmide='sudo hdparm -Y'
 alias vopen='sudo cryptsetup -t tcrypt open'
 alias anacrontab="${EDITOR} ${HOME}/.local/etc/anacrontab"
